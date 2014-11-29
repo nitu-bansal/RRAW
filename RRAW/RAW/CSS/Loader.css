@@ -1,0 +1,46 @@
+﻿body
+{
+    font-family: Verdana, Calibri, Trebuchet MS, Arial;
+    font-size: 11px;
+    margin:0px 0px 0px 0px;
+}
+
+table td
+{
+    vertical-align: top;
+}
+
+#loading_notifier_box
+{
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: White;
+    text-align: center;
+    line-height: 2em;
+    font-size: 12px;
+}
+
+#loading_notifier
+{
+    top: 210px;
+    left: 495px;
+    z-index: 10000;
+    background: url("../Images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 177px;
+}
+
+#processing_image
+{
+    width: 42px;
+    height: 42px;
+    z-index: 10000;
+    background: url("../Images/loader.gif");
+    left: 65px;
+    position: absolute;
+}

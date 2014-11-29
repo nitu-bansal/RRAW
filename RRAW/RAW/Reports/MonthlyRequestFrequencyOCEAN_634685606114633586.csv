@@ -1,0 +1,11 @@
+﻿Details of Origin - Destination Monthly Request Frequency (OCEAN)
+OriginPort,DestPort,ConsigneeName,RequestDate,January,February,March,April,May,June,July,August,September,October,November,December,Total
+,,,02/14/2012,0,1,0,0,0,0,0,0,0,0,0,0,1
+,,,02/16/2012,0,3,0,0,0,0,0,0,0,0,0,0,3
+,,,02/17/2012,0,1,0,0,0,0,0,0,0,0,0,0,1
+,,,02/24/2012,0,1,0,0,0,0,0,0,0,0,0,0,1
+,,213123,02/16/2012,0,1,0,0,0,0,0,0,0,0,0,0,1
+,123,,02/20/2012,0,1,0,0,0,0,0,0,0,0,0,0,1
+,2,,03/06/2012,0,0,1,0,0,0,0,0,0,0,0,0,1
+BKK,HKG,,03/12/2012,0,0,1,0,0,0,0,0,0,0,0,0,1
+VBNB,CVBNC,VBNVB,02/20/2012,0,1,0,0,0,0,0,0,0,0,0,0,1

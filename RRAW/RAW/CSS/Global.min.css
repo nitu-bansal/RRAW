@@ -1,0 +1,94 @@
+﻿body, input, select, textarea {
+    font-family: Verdana, Calibri, Trebuchet MS, Arial;
+    font-size: 11px;
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+input[type='button'], input[type='submit'] {
+    /*background: -webkit-gradient(linear,0% 40%,0% 70%,from(whiteSmoke),to(#F1F1F1));*/
+    font: 75% Arial,Sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #f3f3f3;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #555;
+    cursor: pointer;
+    height: 31px;
+    line-height: 31px;
+    padding: 0 8px;
+    text-align: center;
+    transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    min-width: 60px;
+    margin: 2px;
+    min-height: 25px;
+}
+
+input[type='button']:hover, input[type='submit']:hover, input[type='button']:focus, input[type='submit']:focus {
+    background-color: #f5f5f5;
+    border-color: #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    color: #333;
+}
+
+.page_title {
+    text-decoration: underline;
+    font-size: small;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.notificationBox {
+    display: none;
+    position: absolute;
+    left: 503px;
+    top: 42px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 3px 3px 5px #777;
+    -moz-box-shadow: 3px 3px 5px #777;
+    -webkit-box-shadow: 3px 3px 5px #777;
+    -ms-box-shadow: 3px 3px 5px #777;
+    -o-box-shadow: 3px 3px 5px #777;
+    border: solid 1px #E3E3E3;
+    color: #666;
+    max-width: 240px;
+    min-width: 240px;
+    overflow: hidden;
+    z-index: 1002;
+    font: normal 11px arial,sans-serif;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+.notificationTitle {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+.notificationDescription {
+    background-color: #EEE;
+    margin-top: 4px;
+    padding: 2px 10px;
+}

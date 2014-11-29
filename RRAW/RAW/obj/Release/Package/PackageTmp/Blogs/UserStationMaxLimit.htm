@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <p>
+        <b>Increasing limit for max no. of characters in User Station</b><br />
+        <small>REFERENCE: RRAW Portal Update Log (ID: 56)</small></p>
+    <ul>
+        <li><b>UI Changes</b><ol>
+            <li>AdminPanel.aspx -> txtNewUserStation.MaxLength
+                <pre>OLD Value: 3
+<br />NEW Value: 20</pre>
+            </li>
+        </ol>
+        </li>
+        <li><b>VB.net Coding Changes</b>
+            <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NONE</pre>
+        </li>
+        <li><b>DB Changes</b><ol>
+            <li>Changing data type of field 'Station' in Data Table<ol>
+                <li>Users
+                    <pre>OLD VALUE: CHAR(3)
+<br />NEW VALUE: VARCHAR(20)</pre>
+                </li>
+            </ol>
+            </li>
+            <li>Changing data type in Stored Procedures<ol>
+                <li>CreateUser
+                    <pre>OLD VALUE: @Station char(3)
+<br />NEW VALUE: @Station varchar(20)</pre>
+                </li>
+                <li>UpdateUserDetails
+                    <pre>OLD VALUE: @Station char(3)
+<br />NEW VALUE: @Station varchar(20)</pre>
+                </li>
+            </ol>
+            </li>
+        </ol>
+        </li>
+    </ul>
+</body>
+</html>

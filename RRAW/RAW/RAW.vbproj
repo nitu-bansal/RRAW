@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21E078DC-981B-4116-9948-E3427ABFB3D8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RRAW</RootNamespace>
+    <AssemblyName>RRAW</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <Optimize>false</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <DebugSymbols>false</DebugSymbols>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <WarningLevel>1</WarningLevel>
+    <CodeAnalysisRuleSet>Migrated rules for RAW.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>RRAWStrongNameKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Web.ClientServices" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanel_Old.aspx" />
+    <Content Include="AirRateRequest.aspx" />
+    <Content Include="AuthenticationFailed.aspx" />
+    <Content Include="Blogs\RRAW2_1_3_1Released.htm" />
+    <Content Include="Blogs\RRAW2_1_5_0Released.htm" />
+    <Content Include="Blogs\RRAW2_1_5_1Released.htm" />
+    <Content Include="CSS\AdminPanel.min.css" />
+    <Content Include="CSS\ApprovedAsAdhoc.min.css" />
+    <Content Include="CSS\Blog.min.css" />
+    <Content Include="CSS\border-radius.htc" />
+    <Content Include="CSS\Bubbles.css" />
+    <Content Include="CSS\Dashboard.min.css" />
+    <Content Include="CSS\Dashboard_NEW.css" />
+    <Content Include="CSS\demo_table.css" />
+    <Content Include="CSS\demo_table_jui.css" />
+    <Content Include="CSS\DynamicControl.css" />
+    <Content Include="CSS\Experiment.css" />
+    <Content Include="CSS\Global.min.css" />
+    <Content Include="CSS\Global_IE.min.css" />
+    <Content Include="CSS\IdentifyEuropeanZon.min.css" />
+    <Content Include="CSS\images\ajax-loader.png" />
+    <Content Include="CSS\images\FindEuropeanZone.png" />
+    <Content Include="CSS\images\icon-search-black.png" />
+    <Content Include="CSS\images\icons-18-black.png" />
+    <Content Include="CSS\images\icons-18-white.png" />
+    <Content Include="CSS\images\icons-36-black.png" />
+    <Content Include="CSS\images\icons-36-white.png" />
+    <Content Include="CSS\images\select2-spinner.gif" />
+    <Content Include="CSS\images\select2.png" />
+    <Content Include="CSS\images\select2x2.png" />
+    <Content Include="CSS\images\spinner.gif" />
+    <Content Include="CSS\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="CSS\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="CSS\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="CSS\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="CSS\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="CSS\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="CSS\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="CSS\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="CSS\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="CSS\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="CSS\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="CSS\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="CSS\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="CSS\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="CSS\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="CSS\Issues.min.css" />
+    <Content Include="CSS\jquery-ui-1.8.14.custom.css" />
+    <Content Include="CSS\jquery.dataTables.css" />
+    <Content Include="CSS\jquery.mobile-1.0b2.min.css" />
+    <Content Include="CSS\jquery.mobile-1.0b3.min.css" />
+    <Content Include="CSS\jquery.ui.accordion.css" />
+    <Content Include="CSS\Loader.css" />
+    <Content Include="CSS\Login.css" />
+    <Content Include="CSS\Master.min.css" />
+    <Content Include="CSS\MultiSelect.css" />
+    <Content Include="CSS\NewRateRequest.min.css" />
+    <Content Include="CSS\NewRateRequest_OLD.min.css" />
+    <Content Include="CSS\OceanRateRequest.min.css" />
+    <Content Include="CSS\select2.css" />
+    <Content Include="CSS\Style.min.css" />
+    <Content Include="CSS\TableTools.css" />
+    <Content Include="CSS\Tabs.min.css" />
+    <Content Include="CSS\Tariff.min.css" />
+    <Content Include="CSS\TruckRateRequest.min.css" />
+    <Content Include="CSS\Updates.min.css" />
+    <Content Include="CSS\UserModulesMapping.min.css" />
+    <Content Include="DocumentStorage.aspx" />
+    <Content Include="FSCIntnlAirFreightFuelRules.aspx" />
+    <Content Include="IdentifyEuropeanZone.aspx" />
+    <Content Include="Images\Add.png" />
+    <Content Include="Images\addrow.png" />
+    <Content Include="Images\alias.png" />
+    <Content Include="Images\Blogs\bg-home-tile.jpg" />
+    <Content Include="Images\Blogs\bg-interior-tile-drk.jpg" />
+    <Content Include="Images\Blogs\bg_home_content.gif" />
+    <Content Include="Images\cevalogo.gif" />
+    <Content Include="Images\cevalogo.png" />
+    <Content Include="Images\class.png" />
+    <Content Include="Images\class_method.png" />
+    <Content Include="Images\class_property.png" />
+    <Content Include="Images\cleardot.gif" />
+    <Content Include="Images\collapse.png" />
+    <Content Include="Images\constructor.png" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\description.png" />
+    <Content Include="Images\Down_img.png" />
+    <Content Include="Images\erase.png" />
+    <Content Include="Images\expand.png" />
+    <Content Include="Images\FSCSample.png" />
+    <Content Include="Images\grip.png" />
+    <Content Include="Images\header-stripe-small.png" />
+    <Content Include="Images\icon-update.gif" />
+    <Content Include="Images\icon_searchglass.gif" />
+    <Content Include="Images\icon_searchglass.png" />
+    <Content Include="Images\images.png" />
+    <Content Include="Images\images1.png" />
+    <Content Include="Images\information.png" />
+    <Content Include="Images\instance_method.png" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\loader2.gif" />
+    <Content Include="Images\loader3.gif" />
+    <Content Include="Images\login-box-backg1.png" />
+    <Content Include="Images\login-btn.png" />
+    <Content Include="Images\mixin.png" />
+    <Content Include="Images\namespace.png" />
+    <Content Include="Images\navigation.png" />
+    <Content Include="Images\navigation_12Sep2012.png" />
+    <Content Include="Images\navigation_noncompressed.png" />
+    <Content Include="Images\paneh.gif" />
+    <Content Include="Images\panehc.gif" />
+    <Content Include="Images\panev.gif" />
+    <Content Include="Images\panevc.gif" />
+    <Content Include="Images\phpThumb_generated_thumbnail.png" />
+    <Content Include="Images\pinned.png" />
+    <Content Include="Images\popup.png" />
+    <Content Include="Images\procImage.gif" />
+    <Content Include="Images\RrawLogo.png" />
+    <Content Include="Images\RrawLogo1.png" />
+    <Content Include="Images\RrawLogo2.png" />
+    <Content Include="Images\SearcelogoNew.png" />
+    <Content Include="Images\searce_logo.jpg" />
+    <Content Include="Images\searce_logo.png" />
+    <Content Include="Images\searce_logo_noncompressed.png" />
+    <Content Include="Images\search-background.png" />
+    <Content Include="Images\Search.png" />
+    <Content Include="Images\section-background.png" />
+    <Content Include="Images\select2-spinner.gif" />
+    <Content Include="Images\select2.png" />
+    <Content Include="Images\select2x2.png" />
+    <Content Include="Images\selected-section-background.png" />
+    <Content Include="Images\Slide.png" />
+    <Content Include="Images\Title.png" />
+    <Content Include="Images\UnderMaintenance1.gif" />
+    <Content Include="Images\unpinned.png" />
+    <Content Include="Images\Up_img.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\utility.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_diagonals-small_25_c5ddfc_40x40.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_diagonals-thick_20_e88f91_40x40.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_diagonals-thick_26_2293f7_40x40.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_flat_0_8d9ee4_40x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_flat_0_a0aed9_40x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_highlight-hard_20_3a85c5_1x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_highlight-soft_50_063d6b_1x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_inset-hard_100_eeeeee_1x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_inset-hard_22_063d6b_1x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_0a82eb_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_0b54d5_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_5fa5e3_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_f4f4f3_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\jquery-ui-1.9.2.custom.css" />
+    <Content Include="jquery-ui-1.9.2.overcast\css\overcast\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="jquery-ui-1.9.2.overcast\js\jquery-1.8.3.js" />
+    <Content Include="jquery-ui-1.9.2.overcast\js\jquery-ui-1.9.2.custom.js" />
+    <Content Include="jquery-ui-1.9.2.overcast\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="jQuery-Validation-Engine-master\css\customMessages.css" />
+    <Content Include="jQuery-Validation-Engine-master\css\screenshot.png" />
+    <Content Include="jQuery-Validation-Engine-master\css\template.css" />
+    <Content Include="jQuery-Validation-Engine-master\css\validationEngine.jquery.css" />
+    <Content Include="jQuery-Validation-Engine-master\js\contrib\other-validations.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\jquery-1.8.2.min.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\jquery.validationEngine.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-cz.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-da.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-de.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-en.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-es.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-et.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-fa.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-fi.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-fr.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-hr.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-hu.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-it.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-ja.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-nl.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-no.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-pl.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-pt.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-pt_BR.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-ro.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-ru.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-se.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-tr.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-vi.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-zh_CN.js" />
+    <Content Include="jQuery-Validation-Engine-master\js\languages\jquery.validationEngine-zh_TW.js" />
+    <Content Include="media\css\TableTools.css" />
+    <Content Include="media\images\copy.png" />
+    <Content Include="media\images\copy_hover.png" />
+    <Content Include="media\images\csv.png" />
+    <Content Include="media\images\csv_hover.png" />
+    <Content Include="media\images\print.png" />
+    <Content Include="media\images\print_hover.png" />
+    <Content Include="media\images\xls.png" />
+    <Content Include="media\images\xls_hover.png" />
+    <Content Include="media\js\TableTools.js" />
+    <Content Include="media\support\jquery.dataTables.min.js" />
+    <Content Include="media\support\jquery.jeditable.js" />
+    <Content Include="media\support\jquery.js" />
+    <Content Include="media\swf\copy_csv_xls.swf" />
+    <Content Include="media\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="media\ZeroClipboard\ZeroClipboard.js" />
+    <Content Include="NewAirRateRequest.aspx" />
+    <Content Include="NewGroundRateRequest.aspx" />
+    <Content Include="NewOceanRateRequest.aspx" />
+    <Content Include="OceanTariff_New.aspx" />
+    <Content Include="OceanTariff_Old.aspx" />
+    <Content Include="RateRequestWorkFlow.aspx" />
+    <Content Include="Scripts\AdminPanel.min.js" />
+    <Content Include="Scripts\AdminPanel.min_old.js" />
+    <Content Include="Scripts\AirRateRequest.js" />
+    <Content Include="Scripts\AjaxLoad.min.js" />
+    <Content Include="Scripts\ApprovedAsAdhoc.min.js" />
+    <Content Include="Scripts\Blog.min.js" />
+    <Content Include="Scripts\Dashboard.min.js" />
+    <Content Include="Scripts\Dashboard_NEW.min.js" />
+    <Content Include="Scripts\ExecAsync.min.js" />
+    <Content Include="Scripts\FormValidation.js" />
+    <Content Include="Scripts\FSCUpdate.min.js" />
+    <Content Include="Scripts\GetAsync.min.js" />
+    <Content Include="Scripts\GetSync.min.js" />
+    <Content Include="Scripts\GroundRateRequest.js" />
+    <Content Include="Scripts\HighlightCell.js" />
+    <Content Include="Scripts\Issues.min.js" />
+    <Content Include="Scripts\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.14.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Scripts\jquery.dataTables.columnFilter.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.0b2.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.0b3.min.js" />
+    <Content Include="Scripts\jquery.ui.accordion.min.js" />
+    <Content Include="Scripts\LoginMobile.js" />
+    <Content Include="Scripts\Master.min.js" />
+    <Content Include="Scripts\md5-min.js" />
+    <Content Include="Scripts\multiselect.js" />
+    <Content Include="Scripts\Navigation.min.js" />
+    <Content Include="Scripts\NewAirRateRequest.min.js" />
+    <Content Include="Scripts\NewAirRateRequest.min1.js" />
+    <Content Include="Scripts\NewRateRequest.min.js" />
+    <Content Include="Scripts\NewRateRequest_OLD.min.js" />
+    <Content Include="Scripts\NewTruckRateRequest.min.js" />
+    <Content Include="Scripts\OceanRateRequest.js" />
+    <Content Include="Scripts\OceanRateRequest.min.js" />
+    <Content Include="Scripts\OceanRateRequest_OLD.min.js" />
+    <Content Include="Scripts\OceanRateRequest_OLD1.min.js" />
+    <Content Include="Scripts\OceanRates.min.js" />
+    <Content Include="Scripts\RateRequestWorkflow.min.js" />
+    <Content Include="Scripts\RenderDynamicControls.js" />
+    <Content Include="Scripts\RequestSpaceMobile.js" />
+    <Content Include="Scripts\Resizer.js" />
+    <Content Include="Scripts\RightPanel.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\TableTools.js" />
+    <Content Include="Scripts\TableTools.min.js" />
+    <Content Include="Scripts\Tabs.min.js" />
+    <Content Include="Scripts\Tariff.min.js" />
+    <Content Include="Scripts\TariffSearch.min.js" />
+    <Content Include="Scripts\Tariff_New.min.js" />
+    <Content Include="Scripts\Tariff_Old.min.js" />
+    <Content Include="Scripts\temp.js" />
+    <Content Include="Scripts\TruckRateRequest.min.js" />
+    <Content Include="Scripts\TruckRates.min.js" />
+    <Content Include="Scripts\UserReports.min.js" />
+    <Content Include="Scripts\XMLHttpSyncExecutor.js" />
+    <Content Include="Scripts\ZeroClipboard.js" />
+    <Content Include="select2-release-3.2\select2.css" />
+    <Content Include="select2-release-3.2\select2.js" />
+    <Content Include="select2-release-3.2\select2.min.js" />
+    <Content Include="select2-release-3.2\select2.png" />
+    <Content Include="select2-release-3.2\select2x2.png" />
+    <Content Include="select2-release-3.2\spinner.gif" />
+    <Content Include="TariffSearch.aspx" />
+    <Content Include="Tariff_New.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="OceanRateRequest_OLD.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MasterMobile.aspx" />
+    <Content Include="LoginMobile.aspx" />
+    <Content Include="RequestSpaceMobile.aspx" />
+    <Content Include="Navigation.htm" />
+    <Content Include="Tariff_old.aspx" />
+    <Content Include="TruckRateRequest_NEW.aspx" />
+    <Content Include="OceanTariff.aspx" />
+    <Content Include="UserControls\CustomSearch.ascx" />
+    <Content Include="WebServices\AirRateRequests.asmx" />
+    <Content Include="WebServices\Attachments.asmx" />
+    <Content Include="WebServices\Authentications.asmx" />
+    <Content Include="WebServices\AutoComplete.asmx" />
+    <Content Include="WebServices\AutoComplete_Old.asmx" />
+    <Content Include="WebServices\DynamicFieldsControl.asmx" />
+    <Content Include="WebServices\Issues.asmx" />
+    <Content Include="WebServices\Mobile.asmx" />
+    <Content Include="WebServices\OceanRateRequests.asmx" />
+    <Content Include="WebServices\Reports.asmx" />
+    <Content Include="WebServices\Select2.asmx" />
+    <Content Include="WebServices\Test.asmx" />
+    <Content Include="WebServices\TruckRateRequests.asmx" />
+    <None Include="media\images\copy document.psd" />
+    <None Include="media\images\file_types.psd" />
+    <None Include="media\images\printer.psd" />
+    <None Include="media\ZeroClipboard\ZeroClipboard.as" />
+    <None Include="media\ZeroClipboard\ZeroClipboard.fla" />
+    <None Include="Migrated rules for RAW.ruleset" />
+    <None Include="My Project\PublishProfiles\Profile1.pubxml" />
+    <None Include="select2-release-3.2\LICENSE" />
+    <None Include="select2-release-3.2\README.md" />
+    <None Include="select2-release-3.2\release.sh" />
+    <None Include="Temp\Codes\NewRateRequest.aspx.txt" />
+    <Content Include="TruckRates_Old.aspx" />
+    <Content Include="UploadFilePage.aspx" />
+    <Content Include="UserControls\DyanamicForm.ascx" />
+    <Content Include="UserControls\RightPanel.ascx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="Issues.aspx" />
+    <Content Include="OceanRateRequest.aspx" />
+    <Content Include="DownloadFile.aspx" />
+    <Content Include="NewTicket.htm" />
+    <None Include="Temp\Codes\Temp Codes.txt" />
+    <Content Include="UserReports.aspx" />
+    <Content Include="UserReports.htm" />
+    <Content Include="Blog.aspx" />
+    <Content Include="Blogs\RRAW2_1_3_1Released%28ReleaseProcedure%29.htm" />
+    <Content Include="Blogs\LoggingRequestGenerationEntrySeparately.htm" />
+    <Content Include="Blogs\RateRequestToAdhoc.htm" />
+    <Content Include="Blogs\UserStationMaxLimit.htm" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="GetBlogEntries.aspx" />
+    <Content Include="DoLogout.aspx" />
+    <Content Include="ApprovedAsAdhoc.aspx" />
+    <Content Include="AdminPanel.aspx" />
+    <Content Include="OfflineManual.aspx" />
+    <Content Include="OnlineManual.aspx" />
+    <Content Include="GetSimmilarLanes.aspx" />
+    <Content Include="TruckRateRequest.aspx" />
+    <Content Include="TruckRates.aspx" />
+    <Content Include="FSCUpdateThailand.aspx" />
+    <Content Include="OceanRates.aspx" />
+    <Content Include="FSCUpdateMalaysia.aspx" />
+    <Content Include="NewRateRequest.aspx" />
+    <Content Include="UnderMaintenance.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Errors.aspx" />
+    <Content Include="ExportFile.aspx" />
+    <Content Include="GenericErrorPage.htm" />
+    <Content Include="Global.asax" />
+    <Content Include="Master.aspx" />
+    <Content Include="SendMailAsync.aspx" />
+    <Content Include="Tariff.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel_Old.aspx.designer.vb">
+      <DependentUpon>AdminPanel_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel_Old.aspx.vb">
+      <DependentUpon>AdminPanel_Old.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AirRateRequest.aspx.designer.vb">
+      <DependentUpon>AirRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirRateRequest.aspx.vb">
+      <DependentUpon>AirRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthenticationFailed.aspx.designer.vb">
+      <DependentUpon>AuthenticationFailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationFailed.aspx.vb">
+      <DependentUpon>AuthenticationFailed.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BLL\AuthenticationTokens.vb" />
+    <Compile Include="BLL\Dashboard.vb" />
+    <Compile Include="BLL\FSC.vb" />
+    <Compile Include="BLL\IdentifyEuropeanZone.vb" />
+    <Compile Include="BLL\Tariffs_New.vb" />
+    <Compile Include="BLL\TruckRates.vb" />
+    <Compile Include="BLL\TruckRateRequests.vb" />
+    <Compile Include="BLL\CustomClearanceModes.vb" />
+    <Compile Include="BLL\Utilities.vb" />
+    <Compile Include="BLL\OceanRates.vb" />
+    <Compile Include="BLL\Masters.vb" />
+    <Compile Include="BLL\RateRequestMaster.vb" />
+    <Compile Include="BLL\OceanRateRequests.vb" />
+    <Compile Include="BLL\Issues.vb" />
+    <Compile Include="BLL\Reports.vb" />
+    <Compile Include="BLL\Workflow.vb" />
+    <Compile Include="Class\CustomMail.vb" />
+    <Compile Include="Class\WorkflowDecision.vb" />
+    <Compile Include="DocumentStorage.aspx.designer.vb">
+      <DependentUpon>DocumentStorage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentStorage.aspx.vb">
+      <DependentUpon>DocumentStorage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSCIntnlAirFreightFuelRules.aspx.designer.vb">
+      <DependentUpon>FSCIntnlAirFreightFuelRules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSCIntnlAirFreightFuelRules.aspx.vb">
+      <DependentUpon>FSCIntnlAirFreightFuelRules.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IdentifyEuropeanZone.aspx.designer.vb">
+      <DependentUpon>IdentifyEuropeanZone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IdentifyEuropeanZone.aspx.vb">
+      <DependentUpon>IdentifyEuropeanZone.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="NewAirRateRequest.aspx.designer.vb">
+      <DependentUpon>NewAirRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewAirRateRequest.aspx.vb">
+      <DependentUpon>NewAirRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="NewGroundRateRequest.aspx.designer.vb">
+      <DependentUpon>NewGroundRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewGroundRateRequest.aspx.vb">
+      <DependentUpon>NewGroundRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewOceanRateRequest.aspx.designer.vb">
+      <DependentUpon>NewOceanRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewOceanRateRequest.aspx.vb">
+      <DependentUpon>NewOceanRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OceanTariff_New.aspx.designer.vb">
+      <DependentUpon>OceanTariff_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanTariff_New.aspx.vb">
+      <DependentUpon>OceanTariff_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OceanTariff_Old.aspx.designer.vb">
+      <DependentUpon>OceanTariff_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanTariff_Old.aspx.vb">
+      <DependentUpon>OceanTariff_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RateRequestWorkFlow.aspx.designer.vb">
+      <DependentUpon>RateRequestWorkFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RateRequestWorkFlow.aspx.vb">
+      <DependentUpon>RateRequestWorkFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TariffSearch.aspx.designer.vb">
+      <DependentUpon>TariffSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TariffSearch.aspx.vb">
+      <DependentUpon>TariffSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tariff_New.aspx.designer.vb">
+      <DependentUpon>Tariff_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tariff_New.aspx.vb">
+      <DependentUpon>Tariff_New.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OceanRateRequest_OLD.aspx.designer.vb">
+      <DependentUpon>OceanRateRequest_OLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanRateRequest_OLD.aspx.vb">
+      <DependentUpon>OceanRateRequest_OLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterMobile.aspx.designer.vb">
+      <DependentUpon>MasterMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterMobile.aspx.vb">
+      <DependentUpon>MasterMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMobile.aspx.designer.vb">
+      <DependentUpon>LoginMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMobile.aspx.vb">
+      <DependentUpon>LoginMobile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RequestSpaceMobile.aspx.designer.vb">
+      <DependentUpon>RequestSpaceMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestSpaceMobile.aspx.vb">
+      <DependentUpon>RequestSpaceMobile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tariff_old.aspx.designer.vb">
+      <DependentUpon>Tariff_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tariff_old.aspx.vb">
+      <DependentUpon>Tariff_old.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TruckRateRequest_NEW.aspx.designer.vb">
+      <DependentUpon>TruckRateRequest_NEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanTariff.aspx.designer.vb">
+      <DependentUpon>OceanTariff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanTariff.aspx.vb">
+      <DependentUpon>OceanTariff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SortedList.vb" />
+    <Compile Include="TruckRates_Old.aspx.designer.vb">
+      <DependentUpon>TruckRates_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckRates_Old.aspx.vb">
+      <DependentUpon>TruckRates_Old.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UploadFilePage.aspx.designer.vb">
+      <DependentUpon>UploadFilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFilePage.aspx.vb">
+      <DependentUpon>UploadFilePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomSearch.ascx.designer.vb">
+      <DependentUpon>CustomSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomSearch.ascx.vb">
+      <DependentUpon>CustomSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DyanamicForm.ascx.designer.vb">
+      <DependentUpon>DyanamicForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DyanamicForm.ascx.vb">
+      <DependentUpon>DyanamicForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RightPanel.ascx.designer.vb">
+      <DependentUpon>RightPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RightPanel.ascx.vb">
+      <DependentUpon>RightPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Issues.aspx.designer.vb">
+      <DependentUpon>Issues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Issues.aspx.vb">
+      <DependentUpon>Issues.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OceanRateRequest.aspx.designer.vb">
+      <DependentUpon>OceanRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanRateRequest.aspx.vb">
+      <DependentUpon>OceanRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.designer.vb">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.vb">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserReports.aspx.designer.vb">
+      <DependentUpon>UserReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserReports.aspx.vb">
+      <DependentUpon>UserReports.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BLL\Comments.vb" />
+    <Compile Include="BLL\Attachments.vb" />
+    <Compile Include="BLL\Blogs.vb" />
+    <Compile Include="BLL\Modules.vb" />
+    <Compile Include="BLL\ShipMethods.vb" />
+    <Compile Include="BLL\Logs.vb" />
+    <Compile Include="BLL\OceanUpdates.vb" />
+    <Compile Include="BLL\AirRateRequestHistory.vb" />
+    <Compile Include="BLL\UserModulesMapping.vb" />
+    <Compile Include="BLL\RateRequestHolders.vb" />
+    <Compile Include="BLL\RateRequestLog.vb" />
+    <Compile Include="BLL\AirRateRequests.vb" />
+    <Compile Include="BLL\Tariffs.vb" />
+    <Compile Include="Blog.aspx.designer.vb">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog.aspx.vb">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ApprovedAsAdhoc.aspx.designer.vb">
+      <DependentUpon>ApprovedAsAdhoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedAsAdhoc.aspx.vb">
+      <DependentUpon>ApprovedAsAdhoc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.designer.vb">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.vb">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GetBlogEntries.aspx.designer.vb">
+      <DependentUpon>GetBlogEntries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBlogEntries.aspx.vb">
+      <DependentUpon>GetBlogEntries.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DoLogout.aspx.designer.vb">
+      <DependentUpon>DoLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoLogout.aspx.vb">
+      <DependentUpon>DoLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetSimmilarLanes.aspx.designer.vb">
+      <DependentUpon>GetSimmilarLanes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSimmilarLanes.aspx.vb">
+      <DependentUpon>GetSimmilarLanes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TruckRateRequest.aspx.designer.vb">
+      <DependentUpon>TruckRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckRateRequest.aspx.vb">
+      <DependentUpon>TruckRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckRates.aspx.designer.vb">
+      <DependentUpon>TruckRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckRates.aspx.vb">
+      <DependentUpon>TruckRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSCUpdateThailand.aspx.designer.vb">
+      <DependentUpon>FSCUpdateThailand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSCUpdateThailand.aspx.vb">
+      <DependentUpon>FSCUpdateThailand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OceanRates.aspx.designer.vb">
+      <DependentUpon>OceanRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanRates.aspx.vb">
+      <DependentUpon>OceanRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSCUpdateMalaysia.aspx.designer.vb">
+      <DependentUpon>FSCUpdateMalaysia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSCUpdateMalaysia.aspx.vb">
+      <DependentUpon>FSCUpdateMalaysia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="NewRateRequest.aspx.designer.vb">
+      <DependentUpon>NewRateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewRateRequest.aspx.vb">
+      <DependentUpon>NewRateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnderMaintenance.aspx.designer.vb">
+      <DependentUpon>UnderMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnderMaintenance.aspx.vb">
+      <DependentUpon>UnderMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors.aspx.designer.vb">
+      <DependentUpon>Errors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors.aspx.vb">
+      <DependentUpon>Errors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportFile.aspx.designer.vb">
+      <DependentUpon>ExportFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportFile.aspx.vb">
+      <DependentUpon>ExportFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Master.aspx.designer.vb">
+      <DependentUpon>Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.aspx.vb">
+      <DependentUpon>Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DAL\DBClass.vb" />
+    <Compile Include="Class\General.vb" />
+    <Compile Include="BLL\Users.vb" />
+    <Compile Include="SendMailAsync.aspx.designer.vb">
+      <DependentUpon>SendMailAsync.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendMailAsync.aspx.vb">
+      <DependentUpon>SendMailAsync.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="BLL\UserTypes.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tariff.aspx.designer.vb">
+      <DependentUpon>Tariff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tariff.aspx.vb">
+      <DependentUpon>Tariff.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebServices\AirRateRequests.asmx.vb">
+      <DependentUpon>AirRateRequests.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Attachments.asmx.vb">
+      <DependentUpon>Attachments.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Authentications.asmx.vb">
+      <DependentUpon>Authentications.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\AutoComplete.asmx.vb">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\AutoComplete_Old.asmx.vb">
+      <DependentUpon>AutoComplete_Old.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\DynamicFieldsControl.asmx.vb">
+      <DependentUpon>DynamicFieldsControl.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Issues.asmx.vb">
+      <DependentUpon>Issues.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Mobile.asmx.vb">
+      <DependentUpon>Mobile.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\OceanRateRequests.asmx.vb">
+      <DependentUpon>OceanRateRequests.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Reports.asmx.vb">
+      <DependentUpon>Reports.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Select2.asmx.vb">
+      <DependentUpon>Select2.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\Test.asmx.vb">
+      <DependentUpon>Test.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\TruckRateRequests.asmx.vb">
+      <DependentUpon>TruckRateRequests.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\WebInvokeAttribute.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Manuals\RRAWManual.doc" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RRAWStrongNameKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attachments\RateRequestAttachment\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1986</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

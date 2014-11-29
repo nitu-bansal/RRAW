@@ -1,0 +1,463 @@
+﻿body, input, select, textarea {
+    font-family: Verdana, Calibri, Trebuchet MS, Arial;
+    font-size: 11px;
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+input[type='text'] {
+    width: 130px;
+}
+
+.inputbox
+{
+    border: thin solid #dadada;
+    font-size: 11px;
+    padding: 2px;
+    
+}
+.inputbox:focus
+{
+    outline: none;
+    border-color: #0099FF;
+    box-shadow: 0 0 10px #9ecaed;
+    background-color: #FFFFCC;
+}
+select {
+    border: thin solid #dadada;
+    font-size: 11px;   
+ 
+    width: 136px;
+}
+.multiselect {
+    height: 200px;
+}
+
+span.error {
+    float: none;
+    color: red;
+    padding-left: .5em;
+}
+
+#DivUpdateProgress {
+    display: none;
+    position: absolute;
+    top: 39px;
+    left: 0;
+}
+
+.loading_notifier table {
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: #fff;
+    text-align: center;
+    line-height: 2em;
+    font-size: 12px;
+}
+
+.loading_notifier td {
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.loading_notifier {
+    display: none;
+    top: 200px;
+    left: 212px;
+    z-index: 10000;
+    background: url("../images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    visibility: visible;
+    width: 177px;
+}
+
+#processing_image {
+    width: 42px;
+    height: 42px;
+    z-index: 10000;
+    background: url("../images/loader.gif");
+    left: 65px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#overlayDiv {
+    display: none;
+    position: absolute;
+    width: 0;
+    width: 571px;
+    height: 498px;
+    z-index: 10000;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+    padding: 0;
+    margin: 0;
+    top: -12px;
+}
+
+
+.Panel1Width {
+    width: 1150px; 
+}
+
+.Panel2Width {
+    width: 1150px; 
+ }
+
+
+.ValueField {
+    text-align: right;
+}
+
+.BorderedTable th {
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.BorderedTable td {
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.statusLabel {
+    line-height: 1.4em;
+}
+
+.Attachments {
+    width: 100%;
+}
+
+.Attachments td {
+    border: none;
+    padding: 3px;
+}
+
+.SimilarLanes {
+    width: 100%;
+}
+
+.SimilarLanes th {
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.SimilarLanes td {
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+#divAdditionalInformationContainer {
+    height: 492px;
+    overflow-y: scroll;
+}
+
+.group {
+    background-color: #507CD1;
+     background-color: #336699;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+
+.groupTitle {
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 4px;
+}
+.subgroupTitle
+{
+    
+}
+
+.groupContainer {
+    border: 1px solid Gray;
+    width: 100%;   
+    background-color: #EFF3FB;
+    border-radius: 3px;
+      text-align: left;  
+}
+
+.groupContainer  td {
+    border: 1px solid Gray;
+   width:10px;
+    background-color: #EFF3FB;
+    border-radius: 3px;
+    border-color: #000000;
+    border-style: none;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 3px;
+    text-align: left;
+    vertical-align: middle;
+
+}
+.ButtonOperationDiv
+{
+  
+}
+.groupContainer th
+{
+    border-color: #000000;
+    border-style: solid;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+
+    text-align: left;  
+    }
+
+.attachmentImage {
+    background: url(../images/images.png) no-repeat -120px -40px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: 5px;
+}
+
+.attachmentLink {
+    vertical-align: top;
+}
+
+.hideControl {
+    display: none;
+}
+
+.attachmentDiv {
+    height: 23px;
+}
+
+#divAttachments {
+    padding: 5px;
+}
+
+#divPageTitle {
+    text-align: center;
+}
+
+#lblTitle {
+    text-decoration: underline;
+    font-size: small;
+    font-weight: 700;
+}
+
+.PanelsDiv {
+    overflow: auto;
+    height: 498px;/*498*/
+    width: 100%/*1170px*/;
+    
+}
+
+.accordionpane {
+    overflow: auto;
+  
+    
+}
+
+#PanelNewRateRequest table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+    width:100%;
+}
+
+#pnlAdditionalInformation table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+}
+
+#tblRates input[type='text'] {
+    width: 72px;
+    text-align: right;
+}
+
+.RatesTopBorder {
+    border-top: 1px solid #CCC;
+}
+
+.RatesBottomBorder {
+    border-bottom: 1px solid #CCC;
+}
+
+.addIcon {
+    background-image: url(../images/alias.png);
+    height: 16px;
+    width: 16px;
+}
+
+#divAddMoreCharges {
+    cursor: pointer;
+    padding: 3px;
+}
+
+.deleteIcon
+{
+    background-image: url(../images/delete.png);
+    height: 5px;
+    width: 5px;
+    background-repeat: no-repeat;
+    
+}
+.RemRow
+{
+    
+    }
+
+.eraseIcon
+{
+    background-image: url(../images/erase.png);
+    height: 16px;
+    width: 16px;
+}
+
+.labelaboveinput
+{
+   
+    border-width: 3px;
+    border-color: #99CCFF;
+    text-align: center;
+    background-color: transparent;
+    color: Black;
+    text-decoration: none;
+}
+.RatesRangeHolder
+{
+    font-weight: bold;
+    color: #507CD1;    
+    padding-bottom: 4px;
+
+}
+#tblBreakDownCharges input[type=text]
+{
+    width:60px !important;
+}
+#tblBreakDownCharges td {
+    border: 1px solid outset #507CD1;
+    text-align: center;
+}
+#tblBreakDownCharges th
+{
+  border-width: 1px;
+    border-color: #FFFFFF;
+    text-align: center;
+    color: #000000;
+    background-color: #99CCFF;
+}
+
+.tblContainers
+{
+        width:auto !important;
+    
+    }
+.tblContainers td
+{
+  border: 1px solid outset #507CD1;
+  text-align: left;   
+}
+
+#tblMeasurements input[type=text]
+{
+    width:90px !important;
+    
+}
+#tblMeasurements td
+{
+  border: 1px solid outset #507CD1;
+  text-align: center;   
+}
+#tblMeasurements
+{
+    width:auto !important;
+ }
+#tblMeasurements th
+{
+    border-width: 1px;
+    border-color: #FFFFFF;
+    text-align: center;
+    color: #000000;
+    background-color: #99CCFF;
+}
+
+.AddNewRowBtn
+{
+    cursor:pointer;
+}
+
+
+
+.Buckets { 
+ max-height: 180px; 
+ overflow:auto;
+
+}
+
+
+.ButtonOperationDiv
+{
+
+    position:relative;
+    margin :10 2 2 2;
+}
+
+textarea {
+    color: #444;
+    padding: 5px;
+}
+
+.txtstuff {
+    resize: none; /* remove this if you want the user to be able to resize it in modern browsers */
+    overflow: hidden;
+}
+
+.hiddendiv {
+    display: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+}
+
+/* the styles for 'commmon' are applied to both the textarea and the hidden clone */
+/* these must be the same for both */
+.common {
+    width: 553px;
+    min-height: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.lbr {
+    line-height: 3px;
+}
+
+
+.SimilarLanes td {
+    border: 1px solid outset #507CD1;
+    text-align: center;
+}
+.SimilarLanes th
+{
+   border-width: 1px;
+    border-color: #FFFFFF;
+    text-align: center;
+    color: #000000;
+    background-color: #99CCFF;
+}

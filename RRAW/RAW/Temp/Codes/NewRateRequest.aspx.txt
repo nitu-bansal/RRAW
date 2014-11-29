@@ -1,0 +1,34 @@
+<div id="divAttachmentControls">
+    <asp:FileUpload ID="fUpload_1" runat="server" Height="20px" size="50" EnableViewState="false" onchange="attachFile(1);moveDivToBottom('PanelNewRateRequest')" />
+    <asp:FileUpload ID="fUpload_2" runat="server" Height="20px" size="50" EnableViewState="false" onchange="attachFile(2);moveDivToBottom('PanelNewRateRequest')" />
+    <asp:FileUpload ID="fUpload_3" runat="server" Height="20px" size="50" EnableViewState="false" onchange="attachFile(3);moveDivToBottom('PanelNewRateRequest')" />
+    <asp:FileUpload ID="fUpload_4" runat="server" Height="20px" size="50" EnableViewState="false" onchange="attachFile(4);moveDivToBottom('PanelNewRateRequest')" />
+    <asp:FileUpload ID="fUpload_5" runat="server" Height="20px" size="50" EnableViewState="false" onchange="attachFile(5);moveDivToBottom('PanelNewRateRequest')" /></div>
+<div style="display: none" id="divAttachment_1" class="attachmentDiv">
+    <img class="attachmentImage" src="Images/cleardot.gif" alt="" />&nbsp;<asp:CheckBox
+        ID="chkAttachment_1" runat="server" Checked="true" />&nbsp;<a id="linkAttachFile_1" href="#" class="attachmentLink"
+            onclick="lookupForFile(1);">Attach a file</a>
+    <br />
+</div>
+<div style="display: none" id="divAttachment_2" class="attachmentDiv">
+    <img class="attachmentImage" src="Images/cleardot.gif" alt="" />&nbsp;<asp:CheckBox
+        ID="chkAttachment_2" runat="server" Checked="true" />&nbsp;<a id="linkAttachFile_2" href="#" onclick="lookupForFile(2);">Attach
+            another file</a>
+    <br />
+</div>
+<div style="display: none" id="divAttachment_3" class="attachmentDiv">
+    <img class="attachmentImage" src="Images/cleardot.gif" alt="" />&nbsp;<asp:CheckBox
+        ID="chkAttachment_3" runat="server" Checked="true" />&nbsp;<a id="linkAttachFile_3" href="#" onclick="lookupForFile(3);">Attach
+            another file</a>
+    <br />
+</div>
+<div style="display: none" id="divAttachment_4" class="attachmentDiv">
+    <img class="attachmentImage" src="Images/cleardot.gif" alt="" />&nbsp;<asp:CheckBox
+        ID="chkAttachment_4" runat="server" Checked="true" />&nbsp;<a id="linkAttachFile_4" href="#" onclick="lookupForFile(4);">Attach
+            another file</a><br />
+</div>
+<div style="display: none" id="divAttachment_5" class="attachmentDiv">
+    <img class="attachmentImage" src="Images/cleardot.gif" alt="" />&nbsp;<asp:CheckBox
+        ID="chkAttachment_5" runat="server" Checked="true" />&nbsp;<a id="linkAttachFile_5" href="#" onclick="lookupForFile(5);">Attach
+            another file</a>
+</div>

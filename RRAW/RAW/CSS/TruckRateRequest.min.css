@@ -1,0 +1,275 @@
+﻿body, input, select, textarea
+{
+    font-family: Verdana, Calibri, Trebuchet MS, Arial;
+    font-size: 11px;
+}
+
+body
+{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+input[type='text']
+{
+    width:130px;
+}
+
+select
+{
+    margin-left:0px;
+    padding:1px;
+    width:135px;
+}
+
+span.error {
+    float: none;
+    color: red;
+    padding-left: .5em;
+}
+
+#DivUpdateProgress
+{
+    display: none;
+    position: absolute;
+    top: 39px;
+    left: 0;
+}
+
+.loading_notifier table
+{
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: #fff;
+    text-align: center;
+    line-height: 2em;
+    font-size: 12px;
+}
+
+.loading_notifier td
+{
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.loading_notifier
+{
+    top: 200px;
+    left: 212px;
+    z-index: 10000;
+    background: url("../images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    visibility: visible;
+    width: 177px;
+}
+
+#processing_image
+{
+    width: 42px;
+    height: 42px;
+    z-index: 10000;
+    background: url("../images/loader.gif");
+    left: 65px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#overlayDiv
+{
+    position: absolute;
+    width: 0;
+    width: 571px;
+    height: 498px;
+    z-index: 10000;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+    padding: 0;
+    margin: 0;
+    top: -12px;
+}
+
+.pageWidth
+{
+    width: 761px;
+}
+
+.ValueField
+{
+    text-align: right;
+}
+
+.BorderedTable th
+{
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.BorderedTable td
+{
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.statusLabel
+{
+    line-height: 1.4em;
+}
+
+.Attachments
+{
+    width: 100%;
+}
+
+.Attachments td
+{
+    border: none;
+    padding: 3px;
+}
+
+.SimilarLanes
+{
+    width: 100%;
+}
+
+.SimilarLanes th
+{
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+.SimilarLanes td
+{
+    border: 1px solid #222;
+    padding: 3px;
+}
+
+#divAdditionalInformationContainer
+{
+    height: 492px;
+    overflow-y: scroll;
+}
+
+.group
+{
+    background-color: #507CD1;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.groupTitle
+{
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 4px;
+}
+
+.groupContainer
+{
+    border: 1px solid Gray;
+    width: 100%;
+    background-color: #EFF3FB;
+    border-radius: 3px;
+}
+
+.attachmentImage
+{
+    background: url(../images/images.png) no-repeat -120px -40px;
+    width: 15px;
+    height: 15px;
+}
+
+.attachmentLink
+{
+    vertical-align: top;
+}
+
+.hideControl
+{
+    display: none;
+}
+
+.attachmentDiv
+{
+    height: 23px;
+}
+
+#divAttachments
+{
+    padding-top: 5px;
+}
+
+#divPageTitle
+{
+    text-align: center;
+}
+
+#lblTitle
+{
+    text-decoration: underline;
+    font-size: small;
+    font-weight: 700;
+}
+
+#PanelNewRateRequest
+{
+    overflow: auto;
+    height: 535px;
+}
+
+#PanelNewRateRequest table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+}
+
+#tblRates input[type='text']
+{
+    width: 100px;
+    text-align: right;
+}
+
+.RatesTopBorder
+{
+    border-top: 1px solid #CCC;
+}
+
+.RatesBottomBorder
+{
+    border-bottom: 1px solid #CCC;
+}
+
+.addIcon
+{
+    background-image: url(../images/alias.png);
+    height: 16px;
+    width: 16px;
+}
+
+#divAddMoreCharges
+{
+    cursor: pointer;
+    padding: 3px;
+}
+
+.deleteIcon
+{
+    background-image: url(../images/delete.png);
+    height: 16px;
+    width: 16px;
+}
+
+.eraseIcon
+{
+    background-image: url(../images/erase.png);
+    height: 16px;
+    width: 16px;
+}

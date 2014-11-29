@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <p>
+        <b>Transferring a normally approved rate request to adhoc list</b><br />
+        <small>REFERENCE: EMail (From: Sultan Jamshed, To: Mistry Dharmesh, On: 05/06/2011 06:22
+            AM, Sub: FW: Resolution File)</small></p>
+    <ol>
+        <li>Checking for existance of a rate request in database<br />
+            <pre>SELECT * FROM AirRateRequests WHERE ID = 58;</pre>
+            <pre>SELECT * FROM Tariff WHERE RateRequestID = 58;</pre>
+        </li>
+        <li>Matching unique fields between rate request and tariff visually to confirm that
+            the tariff lane is an instance of the specified rate request<br />
+            <br />
+        </li>
+        <li>Once confirmed removing tariff lane<br />
+            <pre>DELETE FROM Tariff WHERE RateRequestID = 58;</pre>
+        </li>
+        <li>Updating rate request to make it approved as adhoc<br />
+            <pre>UPDATE AirRateRequests SET IsAdhoc = 1 WHERE ID = 58;</pre>
+        </li>
+    </ol>
+</body>
+</html>

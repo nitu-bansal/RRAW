@@ -1,0 +1,12 @@
+﻿Summary of Requests (March)
+OriginAirport,Request Type,Sent Rate Requests,Approved by WD,Approved As Adhoc by WD,Rejected by WD
+123,AIR,0,1,0,0
+124,AIR,0,1,0,0
+Total,AIR,0,2,0,0
+,OCEAN,1,4,0,0
+1,OCEAN,0,2,0,0
+11,OCEAN,0,1,0,0
+123,OCEAN,0,1,0,0
+BKK,OCEAN,1,0,0,0
+Total,OCEAN,2,8,0,0
+Total,AIR+OCEAN,2,10,0,0

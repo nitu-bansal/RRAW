@@ -1,0 +1,189 @@
+<html>
+<body>
+    <p>
+        RRAW 2.1.3.1 is out now. In this version we have included some new and very help
+        full facilities which will help you in using RRAW portal very effectively.</p>
+    <ul>
+        <li><b>Blog is the new feature added in this version</b><br />
+            Now user can get information of different versions of system from RRAW Portal Blog.
+            User can visit this blog by clicking Version Text available at right top side of
+            Master Page. User can also browse through older post by using navigation link available
+            on left. Here we will update information about new release as soon as we releases
+            new updates.<br />
+            <br />
+        </li>
+        <li><b>Dates in dashboard will not affect Approved and Approved As Adhoc data only</b>Dates
+            in dashboard was previously affecting all available data in dashboard. From now
+            onwards, changing dates in dasbord will apply filter on Approved and Approved As
+            Adhoc data only.<br />
+            <br />
+            By default system will set FROM DATE as the first date of the current quarter. User
+            can still change this date.<br />
+            <br />
+        </li>
+        <li><b>You can now filter records available in recent activity grid under dashboard</b><br />
+            Filter Rate Request from DASHBOARD itself. User will be able to filter any Rate
+            Request from DASHBOARD by using various fields. So if user want to explore any particular
+            Rate Request and like to explore it's details. Then he can easily apply filter from
+            DASHBOARD can easily get that request from system.
+            <br />
+            <b>User can apply filter based on following fields</b>
+            <ul>
+                <li>ID<br />
+                </li>
+                <li>REQUEST DATE<br />
+                </li>
+                <li>REQUESTOR<br />
+                </li>
+                <li>ORIGIN AIRPORTCODE<br />
+                </li>
+                <li>ORIGIN ZIPCODE<br />
+                </li>
+                <li>DESTINATION AIRPORTCODE<br />
+                </li>
+                <li>DESTINATION ZIPCODE<br />
+                </li>
+                <li>CURRENT APPROVER<br />
+                </li>
+                <li>ORIGINORIGIN COMMENTS.<br />
+                </li>
+            </ul>
+            <br />
+        </li>
+        <li><b>Currently opened Rate Request ID will be displayed on top of rate request details</b><br />
+            <br />
+        </li>
+        <li><b>You can now get list of similar rate requests and available lanes for selected
+            Rate Request</b>
+            <br />
+            After filtering out any particular rate request from DASHBOARD or selecting any
+            particular request from DASHBOARD system will search out requests or lanes similar
+            to selected request with in system and display with that selected request based
+            on following fields.
+            <br />
+            <ul>
+                <li>ORIGIN AIRPORT<br />
+                </li>
+                <li>DESTINATION AIRPORT<br />
+                </li>
+                <li>DESTINATION CITY<br />
+                </li>
+                <li>MODE OF TRANSIT<br />
+                </li>
+                <li>WD SHIWD SHIP METHOD<br />
+                </li>
+            </ul>
+            <br />
+            <b>So user will get list of requests and lanes which are similar to selected request
+                based on above fields in three different categories.</b><br />
+            <ul>
+                <li>Rate Request Available in system similar to selected request.<br />
+                </li>
+                <li>Lanes which are available in master tariff and similar to selected request<br />
+                </li>
+                <li>Lanes which approved as ADHOC and similar to selected request.<br />
+                </li>
+            </ul>
+            <br />
+            From any above list user can explore any request or lane in detail directly by selecting
+            its id. Whenever user select and lane or approved as Adhoc lane he will get that
+            lane directly filtered out from master tariff or adhoc lanes list where user can
+            explore or download that lane if required.
+            <br />
+            <br />
+        </li>
+        <li><b>System will not allow user to create new Rate Request if it is already available
+            in system </b>
+            <br />
+            Whenever user generate new Rate Request system will search out existing requests
+            with in system if user generating Rate Request similar to request available within
+            system then System will not allow user to generate new rate request. It will give
+            error like "You cannot generate new rate request for same information" and provide
+            a link to explore similar request available in system with same details by which
+            user generating new rate request.
+            <br />
+            <br />
+            System will search for simmilar information in Rate Requests, Master Tariff & Approved
+            As Adhoc list for following fields<ul>
+                <li>ORIGIN AIRPORT<br />
+                </li>
+                <li>DESTINATION AIRPORT<br />
+                </li>
+                <li>DESTINATION CITY<br />
+                </li>
+                <li>MODE OF TRANSIT<br />
+                </li>
+                <li>WD SHIWD SHIP METHOD<br />
+                </li>
+                <li>CONSIGNEE NAME<br />
+                </li>
+                <li>MINIMUM FREIGHT RATE<br />
+                </li>
+                <li>FREGIT RATE (PER K.G.)<br />
+                </li>
+                <li>SECURITY RATE<br />
+                </li>
+            </ul>
+            <br />
+            Breifing as if is there any request which is available with same details for which
+            user generating new request at that system will not allow to generate new request
+            it will simply give error and provide information about existing request.
+            <br />
+            <br />
+        </li>
+        <li><b>Rates will be available in tariff after 24 hours of approval from Julio (Client)</b><br />
+            Whenever Julio approves a rate request as adhoc, it will be available in approved
+            as adhoc list immediately. But whenever julio approves a rate request noramally,
+            system will transfer that rate request to the tariff after 24 hours only.<br />
+            <br />
+            In between Julio can revoke that request and either can pass back to the previous
+            approvers for revison or can re-approve it. In case of Julio revokes an approved
+            rate request, system will reset 24hours counter and will re-apply whenever julio
+            approvers that rate request again.<br />
+            <br />
+        </li>
+        <li><b>You can now access all admin functionality from same Module (USER ADMINISTRATION)
+        </b>
+            <br />
+            In this version we have combined all User Administrator modules in single module
+            with help of PANEL. So whenever Admin users want to do any administrator work on
+            any user's profile he can directly do that from this panel. It will reduce input
+            of Amin User. He needs to select any normal users once and he can perform any admin
+            task on that user easily by selected proper tab from panel.
+            <br />
+            <br />
+        </li>
+        <li><b>Newly added facilities in APPROVED AS ADHOC AIR RATE MODULE </b>
+            <br />
+            In this version we have added some new facilities in ADHOC rates module as well.
+            Now user will able to transfer any lane approved as ADHOC directly to master tariff
+            from ADHOC rates module. User can easily remove any lane which is approved as ADHOC
+            with in system from same module. If user not able to find any required lane which
+            should be available in ADHOC rates module he can generate new rate request for that
+            directly from same module. System provide three different buttons for above respective
+            actions.<br />
+            <br />
+            In short user can take following actions directly from APPROVED AS ADHOC AIR RATE
+            MODULE], which is added newly.<br />
+            <ol>
+                <li>Transfer lane approved as ADHOC to master tariff directly.<br />
+                </li>
+                <li>Remove lane which is approved as ADHOC<br />
+                </li>
+                <li>Generate new request if required lane not available in this module.<br />
+                </li>
+            </ol>
+            <br />
+            Now to perform any of above action user need to select any particular lane. Now
+            to select lane user need to click Select link available in front of each lane or
+            if user searched any lane by using filter then system will select that lane by default
+            as after applying filter only one lane is available in result. So in case of filter
+            user have no need to select lane will get selected by system itself if only one
+            lane is available after applying filter.<br />
+            <br />
+        </li>
+        <li><b>Export to Excel function of a Tariff will now return a format simmilar to the
+            existing master tariff excel sheet.</b></li>
+    </ul>
+</body>
+</html>

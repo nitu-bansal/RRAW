@@ -1,0 +1,809 @@
+﻿/* sidebar start */
+body
+{
+    font-family: Verdana, sans-serif; /*font-size: 82.5%;*/
+    font-size: 11px;
+    line-height: 1.9em;
+    margin: 0;
+    padding: 0;
+    margin: auto auto 0 auto;
+}
+
+body *
+{
+    margin: 0;
+    padding: 0;
+}
+
+.err
+{
+    font-size: 12px;
+}
+
+.header
+{
+    margin: 0;
+    padding: 5px; /*background: #4b6c9e;*/
+    background: #5F5F5F;
+    height: 84px;
+}
+
+.logo
+{
+    width: 252px;
+}
+
+.login
+{
+    float: right;
+    color: #fff;
+    text-align: right;
+}
+
+.login a
+{
+    color: #eee;
+    float: right;
+}
+
+#sidebar
+{
+    background: none repeat scroll 0 0 #fff;
+    font-size: 11px;
+    width: 225px;
+    line-height: 1.5em;
+}
+
+ol, ul
+{
+    margin: 0 0 15px;
+}
+
+ul, li
+{
+    list-style-type: none;
+}
+
+li.sub-menu
+{
+    margin-left: 15px;
+}
+
+#sidebar form.search-ribbon
+{
+    background: url("../images/search-background.png") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #587E93;
+    border-right: 1px solid #636363;
+    height: 24px;
+    padding: 4px 0 3px;
+    text-align: center;
+}
+
+#search
+{
+    padding: 2px 3px;
+    width: 220px;
+}
+
+input.ghosted
+{
+    color: #aaa;
+    font-style: italic;
+}
+
+span.hidden
+{
+    display: none;
+}
+
+#menu_pane
+{
+    border-right: 1px solid #636363;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    width: 224px;
+    height: 581px;
+}
+
+#api_menu .menu-item a.section
+{
+    background: url("../images/section-background.png") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000; /*color: #A5A5A5;*/
+    color: #fff;
+    font-weight: 400;
+    height: 22px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.menu-item a.section
+{
+    background-image: url("../images/section.png");
+    margin: 0;
+}
+
+.menu-item a, .menu-item a:link
+{
+    background-position: 6px 50%;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    color: #333;
+    display: block;
+    padding: 3px 10px 3px 28px;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+html[xmlns] .clearfix, html[xmlns] .section
+{
+    display: block;
+}
+
+.menu-item a, .menu-item a:link
+{
+    background-position: 6px 50%;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    color: #333;
+    display: block;
+    padding: 3px 10px 3px 28px;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-item a:hover, .menu-item a.highlighted, #sidebar .highlighted a
+{
+    background-color: #F0F0FF;
+    border-bottom: 1px solid #6699FF;
+    border-top: 1px solid #6699FF;
+}
+
+.section
+{
+    margin: 10px 0 15px;
+}
+
+.clearfix, .section
+{
+    display: inline-block;
+}
+
+.menu-items ul
+{
+    margin: 0;
+}
+
+.menu-section
+{
+    margin-bottom: 1em;
+}
+
+.menu-items ul li
+{
+    list-style-type: none; /*margin-left: 0;*/
+    padding-left: 0;
+}
+
+.menu-items ul .menu-item a
+{
+    background-position: 16px 50%;
+    padding-left: 38px;
+}
+
+.menu-item a.namespace
+{
+    background-image: url("../images/namespace.png");
+}
+
+.menu-item a.class
+{
+    background-image: url("../images/class.png");
+}
+
+.menu-items ul ul .menu-item a
+{
+    background-position: 26px 50%;
+    padding-left: 48px;
+}
+
+.menu-item a.utility
+{
+    background-image: url("../images/utility.png");
+}
+
+.menu-item a.mixin
+{
+    background-image: url("../images/mixin.png");
+}
+
+.menu-item a.class-property
+{
+    background-image: url("../images/class_property.png");
+}
+
+.menu-item a.current-parent, #sidebar .current-parent a
+{
+    background-color: #F0F0FF;
+    font-weight: 700;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+}
+
+.menu-item a.current-child, #sidebar .current-child a
+{
+    background-color: #E0E0FF;
+    font-weight: 700;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    -moz-border-radius-bottomleft: 14px;
+}
+/* sidebar complete */
+
+/* breadcrumb start */
+ul.breadcrumbs
+{
+    list-style-type: none;
+    margin-left: 120px;
+    padding-left: 120px;
+    height: 32.8px;
+}
+
+ul.breadcrumbs li
+{
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+    margin-right: .4em;
+}
+/* breadcrumb complete */
+
+/* Page Title start */
+.title
+{
+    font-family: "Helvetica Neue" , Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-size: x-large;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    width: 950px;
+}
+
+#page
+{
+    /*    width: 1139px;     height: 590px; */
+}
+
+.page-header
+{
+    width: 1139px;
+    height: 40px;
+    display: none;
+}
+
+.page-frame
+{
+    overflow: hidden;
+    width: 1155px;
+    height: 580px;
+    padding: 0 10px 0 10px;
+}
+
+.page-content
+{
+    overflow: hidden;
+    width: 1147px;
+    padding: 20px 0 0 0;
+}
+
+/*.page-footer
+{
+    background-color:#5F5F5F;
+    width: 1260px;
+    height: 20px;
+    color:White;
+    padding:0 10px 0 10px;
+}*/
+
+.page-header ul, .page-header ol
+{
+    margin: 0 0;
+}
+
+.page-header li
+{
+    list-style-type: disc;
+    margin: 5px 0 8px 20px;
+}
+
+.page-header a, .page-header a:link
+{
+    border-bottom: 1px solid #003366;
+    color: #003366;
+    text-decoration: none;
+}
+
+.page-header a:hover
+{
+    border-bottom: 1px solid #336699;
+    color: #4433FF;
+    text-decoration: none;
+}
+
+.page-header a:active
+{
+    border-bottom: 1px solid #002255;
+    color: #4433FF;
+    text-decoration: none;
+}
+
+.page-content h2
+{
+    color: #000;
+    font-size: 23px;
+    margin: 1em 0 .6em;
+}
+
+.page-content h2.page-title
+{
+    color: #444444;
+    font-size: 19px;
+    line-height: 100%;
+    margin: 0 0 15px 10px;
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Helvetica Neue" ,Arial,Helvetica,sans-serif;
+    font-variant: small-caps;
+}
+
+h3
+{
+    font-size: 14px;
+}
+
+select
+{
+    font-size: 11px;
+}
+
+.page-title .type
+{
+    color: #aaa;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+/* Page Title complete */
+
+
+.menu-item a.alias
+{
+    background-image: url("../images/alias.png");
+}
+
+.menu-item a.constructor
+{
+    background-image: url("../images/constructor.png");
+}
+
+.menu-item a.delete
+{
+    background-image: url("../images/delete.png");
+}
+
+.menu-item a.class_property
+{
+    background-image: url("../images/class_property.png");
+}
+
+.menu-item a.class_method
+{
+    background-image: url("../images/class_method.png");
+}
+
+.menu-item a.user
+{
+    background-image: url("../images/user.png");
+}
+
+.bold
+{
+    font-weight: 700;
+}
+
+/* Report table
+----------------------------------------------------------*/
+.ReportTable
+{
+    border: solid 1px gray;
+    line-height: 1.4em;
+    font-size: 11px;
+}
+
+.RTitle
+{
+    /*background-color: #4F81BD;*/
+    background-color: #5F5F5F;
+    color: #fff;
+    height: 30px;
+    font-variant: small-caps;
+    font-size: medium;
+    text-decoration: underline;
+}
+
+.RTTitle
+{
+    background-color: #5F5F5F; /*background-color: #4F81BD;*/
+    color: #fff;
+    height: 30px;
+    line-height: 1.5em;
+}
+
+.RTTitle th
+{
+    width: 98px;
+    border-right: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+}
+
+.R1S1
+{
+    background-color: #DCE6F2;
+}
+
+.R1S1 th
+{
+    width: 60px;
+}
+
+.R2S1
+{
+    background-color: #B9CDE5;
+}
+
+.R2S1 th
+{
+    width: 60px;
+}
+
+.R3S1
+{
+    background-color: #95B3D7;
+}
+
+.R3S1 th
+{
+    width: 60px;
+}
+
+.R3S1H
+{
+    background-color: #4F81BD;
+    color: #fff;
+}
+
+.R3S1H td
+{
+    width: 60px;
+}
+
+.R1S2
+{
+    background-color: #F2DCDB;
+}
+
+.R1S2 th
+{
+    width: 60px;
+}
+
+.R2S2
+{
+    background-color: #E6B9B8;
+}
+
+.R2S2 th
+{
+    width: 60px;
+}
+
+.R3S2
+{
+    background-color: #D99694;
+}
+
+.R3S2 td
+{
+    width: 90px;
+}
+
+.CPending
+{
+    color: #8B0000;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.CPending2
+{
+    color: Purple;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.CAllocated
+{
+    color: Blue;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.CCompleted
+{
+    color: Green;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.CControl
+{
+    text-align: center;
+    border-left: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+
+.CValue
+{
+    text-align: right;
+    color: #4F81BD; /*border: solid 1px gray;*/
+    border-left: solid 1px gray;
+    border-bottom: solid 1px gray;
+    padding: 1px 1px 1px 1px;
+}
+
+.CBorder
+{
+    padding-left: 2px; /*border: solid 1px gray;*/
+    border-left: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+
+.AllocationTable
+{
+    padding: 0;
+    border: solid 1px gray;
+    background-color: #DCE6F2; /*width: 452px*/
+    line-height: 1.4em;
+    font-size: 11px;
+}
+
+.AllocationTable th
+{
+    width: 65px;
+}
+
+.AllocationTable td
+{
+    width: 65px;
+}
+
+.ValueTextBox
+{
+    text-align: right;
+    width: 78px;
+    font-weight: 700;
+    color: #4F81BD;
+    padding-right: 2px;
+    font-family: arial;
+}
+
+/*td
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}*/
+
+.UpdateDCTable
+{
+    width: 52%;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-right: 1px solid gray;
+}
+
+.BillingTable
+{
+    width: 97%;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-right: 1px solid gray;
+}
+
+.UpdateInvTable
+{
+    /*    width: 97%;*/
+    margin-top: 5px;
+    margin-left: 20px;
+    border-right: 1px solid gray;
+}
+
+.AllocationLink
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.overlay
+{
+    z-index: 1000;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+}
+
+#loading_notifier_box
+{
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: #fff;
+    text-align: center;
+    line-height: 2em;
+    font-size: 11px;
+}
+
+#loading_notifier
+{
+    z-index: 10000;
+    background: url("../Images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    left: 475px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+    visibility: visible;
+    width: 177px;
+}
+
+.overlayDiv
+{
+    position: absolute;
+    width: 1096px;
+    height: 503px;
+    z-index: -1;
+}
+
+/************************************************************         Pagination        *******************************************************************************/
+
+/* Pagination */
+.pagerButton
+{
+    background-image: url("../images/Pager.gif");
+    border: 0 none;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.pageFirst
+{
+    background-position: 0 -550px;
+}
+
+.pageFirst:hover
+{
+    background-position: 0 -600px;
+}
+
+.pagePrev
+{
+    background-position: 0 -700px;
+}
+
+.pagePrev:hover
+{
+    background-position: 0 -750px;
+}
+
+.pageNext
+{
+    background-position: 0 -850px;
+}
+
+.pageNext:hover
+{
+    background-position: 0 -900px;
+}
+
+.pageLast
+{
+    background-position: 0 -1000px;
+}
+
+.pageLast:hover
+{
+    background-position: 0 -1050px;
+}
+
+.pagerPage
+{
+    color: #000;
+    text-decoration: none;
+}
+
+.pagerPages a:hover
+{
+    color: #00AA00;
+}
+
+.pagerPages a span
+{
+    padding: 1px 12px 1px 13px;
+    float: left;
+}
+
+.pagerPages a:hover span
+{
+    background-image: url("../images/Pager.gif");
+    background-position: 0 -1150px;
+}
+
+.currentPage
+{
+    background-image: url("../images/Pager.gif");
+    background-position: 0 -1350px;
+}
+
+
+/***************************************************************************************pagination over**********************************************************/
+.editImage
+{
+    background-image: url("../images/Pager.gif");
+    background-position: 7px -1696px;
+    cursor: pointer;
+}
+
+.addBorder
+{
+    border: 1px groove;
+}
+
+.noBorder
+{
+    border: none;
+}
+
+.tdBorder
+{
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.tdValue
+{
+    padding-left: 2px;
+    text-align: right;
+    padding-right: 2px;
+}

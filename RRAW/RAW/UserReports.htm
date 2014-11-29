@@ -1,0 +1,121 @@
+﻿<html>
+<head>
+    <title>User Reports</title>
+    <link href="CSS/Global.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="onLoad()">
+    <form id="form1" runat="server">
+    <div>
+        <div style="position: fixed; text-align: center; text-decoration: underline; width: 100%;">
+            <br />
+            <span style="text-decoration: underline; font-size: small; font-weight: 700">User Reports</span>
+        </div>
+        <br />
+        <br />
+        <br />
+        Select Month:&nbsp;<select id="selectMonth" onchange="UpdateMonthName(this.options[this.selectedIndex].text)">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <br />
+        <br />
+        <div id="divReports">
+            <div id="divSummaryOfRequestsByMonth">
+                <a id="linkSummaryOfRequestsByMonth" href="#" onclick="return SummaryOfRequestsByMonth(document.getElementById('selectMonth').selectedIndex + 1)">
+                    Generate & Download Report for <span style="font-weight: 700">Summary of Requests for
+                        <span id="selectedSummaryOfRequestsByMonthMonthName"></span></span></a>
+            </div>
+            <br />
+            <br />
+            <div id="divNewLanesAddedInMonth">
+                <a id="linkNewLanesAddedInMonth" href="#" onclick="return NewLanesAddedInMonth(document.getElementById('selectMonth').selectedIndex + 1)">
+                    Generate & Download Report for <span style="font-weight: 700">New Lanes Added in <span
+                        id="selectedNewLanesAddedInMonthMonthName"></span></span></a>
+            </div>
+            <br />
+            <br />
+            <div id="divMonthlyApprovalTimeline">
+                <a id="linkMonthlyApprovalTimeline" href="#" onclick="return MonthlyApprovalTimeline(document.getElementById('selectMonth').selectedIndex + 1)">
+                    Generate & Download Report for <span style="font-weight: 700">Monthly Approval Timeline
+                        for <span id="selectedMonthlyApprovalTimelineMonthName"></span></span></a>
+            </div>
+            <br />
+            <br />
+            <div id="divMonthlyRequestFrequency">
+                <a id="linkMonthlyRequestFrequency" href="#" onclick="return MonthlyRequestFrequency()">
+                    Generate & Download Report for <span style="font-weight: 700">Origin - Destination Monthly
+                        Request Frequency</span></a>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+<script src="Scripts/GetAsync.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function onLoad() {
+        try { top.document.getElementById('processing_image').style.display = 'none' } catch (e) { };
+
+        var d = new Date();
+        document.getElementById('selectMonth').selectedIndex = d.getMonth() - 1;
+
+        UpdateMonthName(document.getElementById('selectMonth').options[document.getElementById('selectMonth').selectedIndex].text);
+    }
+
+    function UpdateMonthName(monthName) {
+        document.getElementById('selectedSummaryOfRequestsByMonthMonthName').innerHTML = monthName;
+        document.getElementById('selectedNewLanesAddedInMonthMonthName').innerHTML = monthName;
+        document.getElementById('selectedMonthlyApprovalTimelineMonthName').innerHTML = monthName;
+    }
+
+    // For Report: Summary of Requests By Month
+    function onSuccessOfSummaryOfRequestsByMonth(res) {
+        document.getElementById("divSummaryOfRequestsByMonth").innerHTML += "<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = '" + res + "'>Download <span style='font-weight: 700'>Summary Of Requests for " + document.getElementById('selectMonth').options[document.getElementById('selectMonth').selectedIndex].text + "</span></a>";
+        window.location = res;
+    }
+
+    function SummaryOfRequestsByMonth(monthNumber) {
+        GetAsync("WebServices/Reports.asmx/SummaryOfRequestsByMonth?monthNumber=" + monthNumber, onSuccessOfSummaryOfRequestsByMonth);
+        //RRAW.Reports.SummaryOfRequestsByMonth(monthNumber, onSuccessOfSummaryOfRequestsByMonth);
+    }
+
+    // For Report: New Lanes Added In Month
+    function onSuccessOfNewLanesAddedInMonth(res) {
+        document.getElementById("divNewLanesAddedInMonth").innerHTML += "<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = '" + res + "'>Download <span style='font-weight: 700'>New Lanes Added in " + document.getElementById('selectMonth').options[document.getElementById('selectMonth').selectedIndex].text + "</span></a>";
+        window.location = res;
+    }
+
+    function MonthlyApprovalTimeline(monthNumber) {
+        RRAW.Reports.MonthlyApprovalTimeline(monthNumber, onSuccessOfMonthlyApprovalTimeline);
+    }
+
+    // For Report: New Lanes Added In Month
+    function onSuccessOfMonthlyApprovalTimeline(res) {
+        document.getElementById("divMonthlyApprovalTimeline").innerHTML += "<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = '" + res + "'>Download <span style='font-weight: 700'>Monthly Approval Timeline for " + document.getElementById('selectMonth').options[document.getElementById('selectMonth').selectedIndex].text + "</span></a>";
+        window.location = res;
+    }
+
+    function NewLanesAddedInMonth(monthNumber) {
+        RRAW.Reports.NewLanesAddedInMonth(monthNumber, onSuccessOfNewLanesAddedInMonth);
+    }
+
+    // For Report: Monthly Request Frequency
+    function onSuccessOfMonthlyRequestFrequency(res) {
+        document.getElementById("divMonthlyRequestFrequency").innerHTML = "<a href = '" + res + "'>Download <span style='font-weight: 700'>Origin - Destination Monthly Request Frequency</span></a>";
+        window.location = res;
+    }
+
+    function MonthlyRequestFrequency() {
+        RRAW.Reports.MonthlyRequestFrequency(onSuccessOfMonthlyRequestFrequency);
+    }
+</script>
+</html>

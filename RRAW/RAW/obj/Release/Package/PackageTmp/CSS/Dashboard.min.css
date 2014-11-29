@@ -1,0 +1,129 @@
+﻿body, input, select, textarea {
+    font-family: Verdana, Calibri, Trebuchet MS, Arial;
+    font-size: 11px;
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+table td {
+    vertical-align: top;
+}
+
+.tb td, th {
+    border: 1px solid gray;
+    vertical-align: top;
+}
+.with-border th {
+    border: 1px solid gray;
+}
+.no-border {
+    border: 1px solid gray;
+}
+.no-border td, th {
+    border: none;
+}
+
+.CenterAlign {
+    text-align: right;
+    cursor: default;
+}
+
+.textTopAligned
+{
+    vertical-align: text-top;
+}
+
+.processing_image {
+    width: 42px;
+    height: 42px;
+    z-index: 10000;
+    background: url("../Images/loader.gif");
+    left: 65px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.DivUpdateProgress {
+    display: none;
+    position: absolute;
+    top: 39px;
+    left: 0;
+}
+
+.loading_notifier_box {
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: #fff;
+    text-align: center;
+    line-height: 2em;
+    font-size: 12px;
+}
+
+.loading_notifier_box td {
+    border: none;
+}
+
+.loading_notifier {
+    top: 210px;
+    left: 485px;
+    z-index: 10000;
+    background: url("../Images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    visibility: visible;
+    width: 177px;
+}
+
+.colID {
+    min-width: 30px;
+}
+
+.colRequestDate {
+    min-width: 100px;
+}
+
+.colRequestor {
+    min-width: 120px;
+}
+
+.colOriginAirport {
+    min-width: 90px;
+}
+
+.colOriginZipcode {
+    min-width: 100px;
+}
+
+.colDestinationAirport {
+    min-width: 120px;
+}
+
+.colDestinationZipcode {
+    min-width: 140px;
+}
+
+.colCurrentApprover {
+    min-width: 120px;
+}
+
+.colOriginComment {
+    min-width: 210px;
+}
+
+.attachmentImage {
+    background: url(../Images/images.png) no-repeat -120px -40px;
+    width: 15px;
+    height: 15px;
+    margin: -3px 0;
+}
+
+.hideControl {
+    display: none;
+}

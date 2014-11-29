@@ -1,0 +1,389 @@
+﻿body
+{
+    font: 62.5% "Trebuchet MS" ,Verdana,Helvetica,Arial,sans-serif !important; /*background: url('/Images/Blogs/bg-home-tile.jpg') repeat-x scroll 50% 0 #39414A;*/
+    margin: 0;
+    padding: 0;
+}
+
+/*body#interior
+{
+    background-image: url("/Images/Blogs/bg-interior-tile-drk.jpg");
+}*/
+
+#siteContain
+{
+    margin: 0 auto;
+    width: 960px;
+}
+
+body#interior #header
+{
+    background: none repeat scroll 0 0 transparent;
+    height: 186px;
+}
+
+#header
+{
+    height: 156px;
+    padding: 0 40px;
+    position: relative;
+}
+
+#content
+{
+    /*background: url("/Images/Blogs/bg_home_content.gif") repeat-x scroll center top #181C21;*/
+    border-bottom: 1px solid #000;
+    padding: 4em 20px;
+    min-height: 145px;
+}
+
+.clearfix
+{
+    display: block;
+}
+
+#siteLogo
+{
+    border: 0 none !important;
+    position: absolute;
+    top: 75px;
+    left: 450px;
+}
+
+#ownerLogo
+{
+    border: 0 none !important;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+
+a
+{
+    text-decoration: none;
+    border-bottom: 0 none;
+    color: #5DB0E6;
+}
+
+#header #title
+{
+    font-size: 3em;
+    font-family: "Trebuchet MS" ,Verdana,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #507CD1;
+}
+
+#header h1
+{
+    border: 0 none;
+    bottom: 15px;
+    color: #ddd;
+    font-size: 2em;
+    font-weight: 400;
+    left: 60px;
+    line-height: 1;
+    padding: 0;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    border-bottom: 0 none !important;
+    font-family: "Trebuchet MS" ,Verdana,Helvetica,Arial,sans-serif !important;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation
+{
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #ccc;
+    border-radius: .5em .5em .5em .5em;
+    color: #000;
+    display: inline;
+    float: left;
+    padding: 5px 15px 15px;
+    width: 164px;
+}
+
+#primaryContent
+{
+    min-height: 126px;
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #aaa;
+    border-radius: .5em .5em .5em .5em;
+    color: #222;
+    display: inline;
+    float: right;
+    overflow: visible;
+    padding: 5px 15px 15px;
+    position: relative;
+    width: 670px;
+}
+
+#navigation h5
+{
+    background: none repeat scroll 0 0 #ddd;
+    border-bottom: 1px solid #aaa;
+    color: #192839;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 1.6em 0 .4em;
+    padding: .3em 10px;
+    text-transform: uppercase;
+}
+
+#navigation #blogEntries
+{
+    margin: 0;
+}
+
+#primaryContent .post
+{
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 2.5em;
+    padding-bottom: 2.5em;
+}
+
+#primaryContent small
+{
+    color: #666;
+    font-size: 11px; /*margin: 1.6em 0 1em;*/
+}
+
+#primaryContent h3
+{
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 1em 0 .6em !important;
+}
+
+#primaryContent h2
+{
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 1em 0 .6em !important;
+    text-transform: uppercase;
+}
+
+#interior #primaryContent p, #interior #primaryContent li
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5 !important;
+}
+
+#primaryContent p
+{
+    margin: .5em 0 1.2em !important;
+}
+
+#replyContent
+{
+    background: none repeat scroll 0 0 #FCFCFC;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+textarea
+{
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #E0E0E0;
+    width: 100%;
+    height: 100px;
+}
+
+.blogEntries
+{
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    background: none repeat scroll 0 0 transparent !important;
+    height: 100%;
+}
+
+#navigation a, #navigation a:active
+{
+    outline: none;
+    border-bottom: 1px solid #eee;
+    color: #0F67A1;
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 0;
+    padding: .2em 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+#navigation a:hover
+{
+    background: none repeat scroll 0 0 #eee;
+    border-bottom: 1px solid #ddd;
+    color: #192839;
+}
+
+.loading_notifier_box
+{
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: #fff;
+    text-align: center;
+    line-height: 2em;
+    font-size: 12px;
+}
+
+#loading_notifier
+{
+    position: absolute;
+    margin: 0 auto;
+    left: 275px;
+    z-index: 10000;
+    background: url("../Images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    padding: 0;
+    text-align: center;
+    width: 177px;
+    display: none;
+}
+
+.processing_image
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    z-index: 10000;
+    background: url("../Images/loader.gif");
+    left: 65px;
+}
+
+pre
+{
+    white-space: normal;
+}
+
+#divPrimarySearchForm
+{
+    bottom: 12px;
+    position: absolute;
+    right: 50px;
+}
+
+#divPrimarySearchForm label
+{
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    margin-right: .5em;
+}
+
+#divPrimarySearchForm input#primarySearch
+{
+    width: 286px;
+    height: 19px;
+    padding: 2px 5px;
+    font-size: 1.4em;
+    color: #333;
+    background: white;
+    border: 1px solid #AAA;
+    line-height: 1;
+    font-size: 1.5em;
+    -moz-border-radius: 10px;
+}
+
+#divPrimarySearchForm button
+{
+    background: url(../images/icon_searchglass.png) 0 0 no-repeat;
+    _background-image: url(../images/icon_searchglass.gif);
+    position: relative;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: -18px;
+    top: -1px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+legend
+{
+    font-size: 100%;
+}
+
+#pageParking
+{
+    font: 120% Verdana, Calibri, Trebuchet MS, Arial !important;
+}
+
+#properties table th
+{
+    padding: .4em;
+    text-align: right;
+    width: 20%;
+    vertical-align: middle;
+    font-weight: 100;
+}
+
+fieldset.iefix
+{
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#properties div.trac-resizable, #txtDescription
+{
+    width: 99%;
+}
+
+div.trac-resizable textarea
+{
+    display: block;
+    margin-bottom: 0;
+    max-width: 624px;
+    height: 130px;
+}
+
+div.trac-grip
+{
+    height: 5px;
+    overflow: hidden;
+    background: #EEE url(../Images/grip.png) no-repeat center 1px;
+    border: 1px solid #DDD;
+    border-top-width: 0;
+    cursor: s-resize;
+}
+
+input[type="text"], input.textwidget
+{
+    padding: .45em .5em;
+}
+
+input[type="text"], input.textwidget, textarea
+{
+    border: 1px solid #D7D7D7;
+}
+
+input, select
+{
+    vertical-align: middle;
+}
+
+input, textarea, select
+{
+    margin: 2px;
+}

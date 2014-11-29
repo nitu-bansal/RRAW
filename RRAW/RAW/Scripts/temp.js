@@ -1,0 +1,1 @@
+﻿document.getElementById('Label2').innerHTML = getLocalDateTime();

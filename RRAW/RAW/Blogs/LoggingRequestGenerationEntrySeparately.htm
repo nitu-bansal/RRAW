@@ -1,0 +1,27 @@
+﻿<html>
+<body>
+    <p>
+        <b>Logging Request Generation Entry Separately</b><br />
+        <small>REFERENCE: EMail (From: Sandy Loo, To: Bhiday Swarada, On: 05/11/2011 09:57 AM,
+            Sub: RRAW Portal Dashboard report)</small></p>
+    <ul>
+        <li><b>UI Changes</b>
+            <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NONE</pre>
+        </li>
+        <li><b>VB.net Coding Changes</b>
+            <ol>
+                <li>RateRequestLog.vb (code page) -> DB (namespace) -> RateRequestLog (class) -> RateRequestOperations
+                    (enum)
+                    <pre>Adding one more member "Generated"</pre>
+                </li>
+                <li>NewRateRequest.aspx.vb (code behind page) -> btnPostNewRateRequest_Click() (method)
+                    <pre>Calling function to make entry: DB.RateRequestLog.PostNewRateRequestLog(qStrCurrentRateRequestID, DB.RateRequestLog.RateRequestOperations.Generated, GetCurrentDateTime, CurrentUserID)</pre>
+                </li>
+            </ol>
+        </li>
+        <li><b>DB Changes</b>
+            <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NONE</pre>
+        </li>
+    </ul>
+</body>
+</html>

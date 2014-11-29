@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Johnvey.GmailAgent</name>
+    </assembly>
+    <members>
+        <member name="T:Johnvey.GmailAgent.GmailSession">
+            <summary>
+            Represents an in-use Gmail mailbox account.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailSession.#ctor">
+            <summary>
+            Initializes a new instance of the GmailSession class.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailSession.FinalizeUpdate">
+            <summary>
+            Signals the end of the session refresh and raises any appropriate events.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailSession.OnNewMessage">
+            <summary>
+            Occurs when a new message has been received by the Gmail account.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.Username">
+            <summary>
+            Gets or sets the user's Google Accounts username.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.Password">
+            <summary>
+            Gets or sets the user's Google Accounts password.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.ThreadListTimestamp">
+            <summary>
+            Gets or sets the Gmail mailbox threadlist timestamp.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.Fingerprint">
+            <summary>
+            Gets or sets the Gmail fingerprint.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.LastLoginTime">
+            <summary>
+            Gets or sets the last timestamp the user was authenticated with Google Accounts.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.LastRefreshTime">
+            <summary>
+            Gets or sets the last timestamp when the mailbox status was refreshed.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.DefaultSearchCounts">
+            <summary>
+            Gets or sets the list of new message counts in each of the default searches: Inbox, All, Spam, Starred, Trash, Sent Items.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.CategoryCounts">
+            <summary>
+            Gets or sets the list of new message counts in all the user-defined categories.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.Cookies">
+            <summary>
+            Gets or sets the cookie collection associated with the current session.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.TotalMessages">
+            <summary>
+            Gets or sets the total number of messages in the mailbox.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.UnreadThreads">
+            <summary>
+            Gets or sets the collection of unread threads.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailSession.HasConnectionError">
+            <summary>
+            Gets or sets the flag indicating a connection error with Gmail during the last request.
+            </summary>
+        </member>
+        <member name="E:Johnvey.GmailAgent.GmailSession.NewMessageEventHandler">
+            <summary>
+            Occurs when a new message has been received by the Gmail account.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailSession.EventHandler">
+            <summary>
+            Default EventHandler for GmailSession events.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailCookieFactory">
+            <summary>
+            Provides Gmail-specific cookie generation services.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailCookieFactory.#ctor">
+            <summary>
+            Initializes a new instance of the GmailCookieFactory class.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailCookieFactory.GenerateCookie(System.String)">
+            <summary>
+            Generates a <see cref="T:System.Net.Cookie"/> for use with Gmail.
+            </summary>
+            <param name="cookieName">The name of the cookie to generate.</param>
+            <returns>The <see cref="T:System.Net.Cookie"/> that can be sent along with a <see cref="T:System.Net.HttpWebRequest"/>.</returns>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailContactCollection">
+            <summary>
+            Represents a collection of <see cref="T:Johnvey.GmailAgent.GmailContact"/> objects.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailContactCollection.#ctor">
+            <summary>
+            Initializes a new instance of the GmailContactCollection class.
+            </summary>
+            <remarks>
+            This class currently inherits ArrayList, and therefore is not strongly typed.  Ideally it should implement <see cref="T:System.Collections.IList"/> instead and return <see cref="T:Johnvey.GmailAgent.GmailContact"/>'s only.
+            </remarks>
+        </member>
+        <member name="T:Johnvey.GmailAgent.Utilities">
+            <summary>
+            A collection of auxilliary tools used to deal with Gmail data.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.Utilities.ParseJSArray(System.String)">
+            <summary>
+            Converts a string representation of a JavaScript array to an ArrayList() object.
+            </summary>
+            <param name="input">String containing a JavaScript array.</param>
+            <returns>The converted ArrayList.</returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.Utilities.ParseJSArrayRecurse(System.String,System.Int32@)">
+            <summary>
+            Internal recursive sub-function to ParseJSArray
+            </summary>
+            <param name="input">Incoming string.</param>
+            <param name="outReturnOffset">Reference to cursor state tracker</param>
+            <returns></returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.Utilities.CleanHtml(System.String)">
+            <summary>
+            Removes HTML tags and decodes HTML entities.
+            </summary>
+            <param name="dirtyHtml">The HTML string to clean.</param>
+            <returns>The cleansed string.</returns>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailThread">
+            <summary>
+            Represents a Gmail conversation thread summary.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailThread.#ctor">
+            <summary>
+            Initializes a new instance of the GmailThread class.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.ThreadID">
+            <summary>
+            Gets or sets the thread identifier.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.IsRead">
+            <summary>
+            Gets or sets the 'thread is read' flag.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.IsStarred">
+            <summary>
+            Gets or sets the 'thread is starred' flag.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.DateHtml">
+            <summary>
+            Gets or sets the HTML-formatted thread date.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.AuthorsHtml">
+            <summary>
+            Gets or sets the HTML-formatted thread author(s) text.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.Flags">
+            <summary>
+            Gets or sets the flags string (unknown).
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.SubjectHtml">
+            <summary>
+            Gets or sets the thread subject.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.SnippetHtml">
+            <summary>
+            Gets or sets the thread snippet.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.Categories">
+            <summary>
+            Gets or sets a list of zero or more categories in which the thread is classified.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.AttachHtml">
+            <summary>
+            Gets or sets the HTML-formatted 'thread has attachment' text (contains an IMG tag).
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.MatchingMessageID">
+            <summary>
+            Gets or sets the thread-message link identifier.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailThread.HasExtraSnippet">
+            <summary>
+            DEPRECATED: Gets or sets the flag indicating whether or not the thread has an extra snippet.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailThreadCollection">
+            <summary>
+            Represents a collection of <see cref="T:Johnvey.GmailAgent.GmailThread"/> objects.
+            </summary>
+            <remarks>
+            This class currently inherits ArrayList, and therefore is not strongly typed.  Ideally it should implement <see cref="T:System.Collections.IList"/> instead and return <see cref="T:Johnvey.GmailAgent.GmailThread"/>'s only.
+            </remarks>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailThreadCollection.#ctor">
+            <summary>
+            Initializes a new instance of the GmailThreadCollection class.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailSessionCollection">
+            <summary>
+            Represents a collection of <see cref="T:Johnvey.GmailAgent.GmailSession"/> objects.
+            </summary>
+            <remarks>
+            This class currently inherits ArrayList, and therefore is not strongly typed.  Ideally it should implement <see cref="T:System.Collections.IList"/> instead and return <see cref="T:Johnvey.GmailAgent.GmailSession"/>'s only.
+            </remarks>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailSessionCollection.#ctor">
+            <summary>
+            Initializes a new instance of the GmailSessionCollection class.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailCertificatePolicy">
+            <summary>
+            Provides security certificate validation bypass services.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailCertificatePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the GmailCertificatePolicy class.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailCertificatePolicy.CheckValidationResult(System.Net.ServicePoint,System.Security.Cryptography.X509Certificates.X509Certificate,System.Net.WebRequest,System.Int32)">
+            <summary>
+            Simulates a certificate verification.
+            </summary>
+            <param name="sp">The associated ServicePoint.</param>
+            <param name="cert">The certificate to examine.</param>
+            <param name="req">The WebRequest to use.</param>
+            <param name="problem">I have no idea.</param>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailAdapter">
+            <summary>
+            Represents a set of tools used to communicate with the Gmail system.
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.GOOGLE_LOGIN_URL">
+            <summary>
+            Defines the URL to POST Google Accounts login information.
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.GOOGLE_LOGIN_REFERRER_URL">
+            <summary>
+            Defines the URL to fake as the GOOGLE_LOGIN_URL's referrer. (I don't know if Google is checking this, but it can't hurt.)
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.GMAIL_HOST_URL">
+            <summary>
+            Defines the base URL for Gmail requests.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.#ctor">
+            <summary>
+            Initializes a new instance of the GmailAdapter class.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.Refresh(Johnvey.GmailAgent.GmailSession)">
+            <summary>
+            Queries Gmail to get latest mailbox information.
+            </summary>
+            <param name="session">The <see cref="T:Johnvey.GmailAgent.GmailSession"/> object to query.</param>
+            <returns>The <see cref="T:Johnvey.GmailAgent.GmailAdapter.RequestResponseType"/>.</returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.Login">
+            <summary>
+            Sends Google Accounts login stored in the current <see cref="T:Johnvey.GmailAgent.GmailSession"/> and establishes a session with Gmail.
+            </summary>
+            <returns>True if login was successful; false otherwise.</returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.RefreshDataPack(System.Boolean)">
+            <summary>
+            Requests the auto-refresh DataPack.  
+            </summary>
+            <remarks>
+            If the threadlist timestamp has not changed, Gmail will only send a short DataPack.
+            </remarks>
+            <param name="forceRefresh">DEBUG: Indicates whether to pass an old timestamp, which forces Gmail to resend a full DataPack.</param>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.GetContacts">
+            <summary>
+            Retrieves all the contacts in the user's Gmail address book.
+            </summary>
+            <returns>A <see cref="T:Johnvey.GmailAgent.GmailContactCollection"/> of contacts in address book.</returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.AddContact(System.String,System.String,System.String)">
+            <summary>
+            Adds a contact into the address book. Emails that already exist will be updated with the new information.
+            </summary>
+            <param name="name">Contact display name.</param>
+            <param name="email">Contact email address.</param>
+            <param name="notes">Optional notes.</param>
+            <returns>True if Gmail accepted the command; false otherwise.</returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.ParseDataPack">
+            <summary>
+            Reads in the DataPack and extracts relevant mailbox data.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.MakeWebRequest(System.Uri,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Attempts an HTTP request and returns the response document.
+            </summary>
+            <param name="location">Resource to request.</param>
+            <param name="method">"GET" or "POST".</param>
+            <param name="referrer">The HTTP referer (it's spelled 'referrer', dammit!).</param>
+            <param name="postData">If method if POST, pass the request document; null otherwise.</param>
+            <param name="allowAutoRedirect">Set to true to allow client to follow redirect.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailAdapter.MakeUniqueUrl">
+            <summary>
+            Generates a proxy defeating random string (passed as the 'zx' GET variable).
+            </summary>
+            <returns>Random string composed of JS version and random string.</returns>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailAdapter.JsVersion">
+            <summary>
+            Gets or sets the Gmail JS engine version.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailAdapter.RawLoginResponse">
+            <summary>
+            Gets the raw HTML content returned from the Google Accounts login request.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailAdapter.RawHomeFrameResponse">
+            <summary>
+            Gets the raw HTML content returned from the Gmail base launch request.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailAdapter.RawDataPackResponse">
+            <summary>
+            Gets the raw HTML content returned from a DataPack request.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailAdapter.LastErrorMessage">
+            <summary>
+            Gets the last error message generated by the GmailAdapter methods.  Will be null if there are no errors.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailAdapter.ThreadFetchMode">
+            <summary>
+            Gets or sets the <see cref="T:Johnvey.GmailAgent.GmailAdapter.ThreadFetchType"/> for the adapter. The default is <c>Inbox</c>.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailAdapter.RequestResponseType">
+            <summary>
+            Defines the result of a Gmail request.
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.RequestResponseType.Success">
+            <summary>
+            The request was successful.
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.RequestResponseType.LoginFailed">
+            <summary>
+            The Google Accounts login information did not validate.
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.RequestResponseType.RefreshFailed">
+            <summary>
+            The DataPack request was not successful.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailAdapter.ThreadFetchType">
+            <summary>
+            Defines the type of threads to retrieve.
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.ThreadFetchType.AllUnread">
+            <summary>
+            Unread threads (global).
+            </summary>
+        </member>
+        <member name="F:Johnvey.GmailAgent.GmailAdapter.ThreadFetchType.Inbox">
+            <summary>
+            Inbox threads (read + unread).
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailAdapter.RefreshDelegate">
+            <summary>
+            Represents a delegate for the <see cref="M:Johnvey.GmailAgent.GmailAdapter.Refresh(Johnvey.GmailAgent.GmailSession)"/> method.
+            </summary>
+        </member>
+        <member name="T:Johnvey.GmailAgent.GmailContact">
+            <summary>
+            Represents a Gmail address book contact.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailContact.#ctor">
+            <summary>
+            Initializes a new GmailContact class.
+            </summary>
+        </member>
+        <member name="M:Johnvey.GmailAgent.GmailContact.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new GmailContact class with an initial email address and display name.
+            </summary>
+            <param name="email">The contact's email address.</param>
+            <param name="name">The contact's display name.</param>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailContact.Email">
+            <summary>
+            Gets or sets the contact email address.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailContact.EmailUnescaped">
+            <summary>
+            Gets or sets the contact email address in HTML unescaped format (I've never noticed a difference with email).
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailContact.Name">
+            <summary>
+            Gets or sets the contact display name.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailContact.Notes">
+            <summary>
+            Gets or sets the contact note.
+            </summary>
+        </member>
+        <member name="P:Johnvey.GmailAgent.GmailContact.IsFrequentlyMailed">
+            <summary>
+            Gets or sets the contact frequently mailed flag.
+            </summary>
+        </member>
+    </members>
+</doc>

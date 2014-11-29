@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>RRAW (Rate Request and Approval Workflow)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="foo">
+        <div data-role="header" data-theme="b">
+            <!--<a href="#" data-rel="back" data-icon="arrow-l">Back</a>-->
+            <h1>
+                RRAW (Rate Request and Approval Workflow)</h1>
+        </div>
+        <div data-role="content" data-theme="b">
+            <div id="content-navigation">
+                <ul data-role="listview">
+                    <li><a class="class" href="RequestSpaceMobile.aspx" data-transition="slide" title=""
+                        id="dashboardlink">
+                        Request Space</a></li>
+                    <li><a class="mixin" href="Tariff.aspx" title="" id="tarifflink">Air Freight Rates</a></li>
+                    <li><a class="mixin" href="ApprovedAsAdhoc.aspx" title="" id="approvedasadhoclink">Air
+                        Freight Rates (ADHOC)</a></li>
+                    <li><a class="mixin" href="OceanTariff.aspx" title="" id="oceanrateslink">Ocean Freight
+                        Rates</a></li>
+                    <li><a class="mixin" href="TruckRates.aspx" title="" id="truckrateslink">Truck Rates</a></li>
+                    <li><a class="mixin" href="NewRateRequest.aspx" title="" id="A1">Air Rate Request</a></li>
+                    <li><a class="mixin" href="OceanRateRequest.aspx" title="" id="A2">Ocean Rate Request</a></li>
+                    <li><a class="mixin" href="NewTruckRateRequest.aspx" title="" id="A3">Truck Rate Request</a></li>
+                    <li><a class="mixin" href="FSCUpdateMalaysia.aspx" title="" id="A4">FSC Update - Malaysia</a></li>
+                    <li><a class="mixin" href="FSCUpdateThailand.aspx" title="" id="A5">FSC Update - Thailand</a></li>
+                    <li><a class="mixin" href="ChangePassword.aspx" title="" id="A6">Change Password</a></li>
+                    <li><a class="mixin" href="UserReports.aspx" title="" id="A7">User Reports</a></li>
+                    <li><a class="mixin" href="AdminPanel.aspx" title="" id="A8">Admin Panel</a></li>
+                    <li><a class="mixin" href="https://docs.google.com/document/d/1W9ws6oC-efc5xmuTr1cTjcFUSMmNgt9iOAs_FP_ncGc/edit?hl=en&authkey=CPe_1bAJ.aspx"
+                        title="" id="A9">RRAW Manul</a></li>
+                    <li><a class="mixin" href="http://searce.com/help.aspx" title="" id="A10">Searce Help
+                        Desk</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" style="padding: 5px 0">
+            <a href="LoginMobile.aspx" data-role="button" data-icon="delete" data-transition="slide">Log
+                Out&nbsp;<span id="lblUserName"></span></a><a href="Blog.aspx" data-role="button"
+                    style="float: right" data-ajax="false"><span id="lblAppVersion"></span>
+            </a>
+        </div>
+        <script type="text/javascript">
+            $('div[data-role=page]').live('pageshow', function () {
+                $("#lblUserName").html(GetCookie("CurrentUserName"));
+                $("#lblAppVersion").html(GetCookie("CurrentAppVersion"));
+            });
+
+            function GetCookie(c_name) {
+                var i, x, y, ARRcookies = document.cookie.split(";");
+                for (i = 0; i < ARRcookies.length; i++) {
+                    x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                    y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                    x = x.replace(/^\s+|\s+$/g, "");
+                    if (x == c_name) {
+                        return unescape(y);
+                    }
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <fieldset id="properties">
+        <legend>Properties </legend>
+        <table style="width: 100%">
+            <tr>
+                <th>
+                    <label for="selModules">
+                        Module:</label>
+                </th>
+                <td colspan="3">
+                    <select id="selModules" name="selModules">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="txtSummary">
+                        Summary:</label>
+                </th>
+                <td colspan="3">
+                    <input type="text" id="txtSummary" name="txtSummary" style="width: 510px" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="txtDescription">
+                        Description:</label>
+                </th>
+                <td colspan="3">
+                    <fieldset class="iefix">
+                        
+                        <div class="trac-resizable">
+                            <div>
+                                <textarea id="txtDescription" name="txtDescription" class="trac-resizable"
+                                    rows="10" cols="68"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div style="border-top: 1px dotted" />
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="field-type">
+                        Type:</label>
+                </th>
+                <td>
+                    <select id="field-type" name="field_type">
+                        <option selected="selected" value="bug">bug</option>
+                        <option value="feature">feature</option>
+                        <option value="enhancement">enhancement</option>
+                    </select>
+                </td>
+                <th>
+                    <label for="fileAttachment_1">
+                        Attachment 1:</label>
+                </th>
+                <td>
+                    <input type="file" id="fileAttachment_1" name="fileAttachment_1" style="width: 250px" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="selPriority">
+                        Priority:</label>
+                </th>
+                <td>
+                    <select id="selPriority" name="selPriority">
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                    </select>
+                </td>
+                <th>
+                    <label for="fileAttachment_1">
+                        Attachment 2:</label>
+                </th>
+                <td>
+                    <input type="file" id="file1" name="fileAttachment_1" style="width: 250px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div style="border-top: 1px dotted" />
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                </th>
+                <td>
+                    <a id="btnSubmit" href="#" >Submit Ticket</a>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

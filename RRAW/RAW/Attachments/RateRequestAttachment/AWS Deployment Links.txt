@@ -1,0 +1,5 @@
+http://stackoverflow.com/questions/6861990/can-web-deploys-setacl-provider-be-used-on-a-sub-directory
+https://forums.aws.amazon.com/thread.jspa?messageID=348463
+
+----MySql Cursor Refreshment---
+http://www.java2s.com/Tutorial/MySQL/0240__Cursor/Usingwhilelooptoloopthroughacursor.htm

@@ -1,0 +1,39 @@
+﻿New Lanes Added in OCEAN in March
+RateRequestID,RatesFilledAs,OriginPort,DestPort,RateTitle,BasedOn,PerCBM,Per20GP,Per40GP,Per40HC
+710,Approved Into Master Tariff,1,1,Freight,per BL,1.00,0.00,0.00,0.00
+,,,,Origin FOB,per BL,1.00,0.00,0.00,0.00
+,,,,Origin Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,BAF,per BL,1.00,0.00,0.00,0.00
+,,,,CAF,per amendment,1.00,0.00,0.00,0.00
+,,,,GRI/RR,per BL,1.00,0.00,0.00,0.00
+,,,,PSS,per amendment,1.00,0.00,0.00,0.00
+,,,,Destination Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Drayage,per BL,1.00,0.00,0.00,0.00
+715,Approved Into Master Tariff,1,1,Freight,per BL,1.00,0.00,0.00,0.00
+,,,,Origin FOB,per BL,1.00,0.00,0.00,0.00
+,,,,Origin Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,BAF,per BL,1.00,0.00,0.00,0.00
+,,,,CAF,per BL,1.00,0.00,0.00,0.00
+,,,,GRI/RR,per BL,1.00,0.00,0.00,0.00
+,,,,PSS,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Drayage,per BL,1.00,0.00,0.00,0.00
+716,Approved Into Master Tariff,11,1,Freight,per BL,1.00,0.00,0.00,0.00
+,,,,Origin FOB,per BL,1.00,0.00,0.00,0.00
+,,,,Origin Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,BAF,per BL,1.00,0.00,0.00,0.00
+,,,,CAF,per BL,1.00,0.00,0.00,0.00
+,,,,GRI/RR,per BL,1.00,0.00,0.00,0.00
+,,,,PSS,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Drayage,per BL,1.00,0.00,0.00,0.00
+740,Approved Into Master Tariff,123,213,Freight,per BL,1.00,0.00,0.00,0.00
+,,,,Origin FOB,per amendment,1.00,0.00,0.00,0.00
+,,,,Origin Security Escort,per shipment,1.00,0.00,0.00,0.00
+,,,,BAF,per amendment,1.00,0.00,0.00,0.00
+,,,,CAF,per BL,1.00,0.00,0.00,0.00
+,,,,GRI/RR,per shipment,1.00,0.00,0.00,0.00
+,,,,PSS,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Security Escort,per BL,1.00,0.00,0.00,0.00
+,,,,Destination Drayage,per amendment,1.00,0.00,0.00,0.00
+,,,,Chetan,per BL,1.00,0.00,0.00,0.00

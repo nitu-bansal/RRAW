@@ -1,0 +1,94 @@
+﻿body, input, select, textarea
+{
+    font-family: Verdana, Calibri, Trebuchet MS, Arial;
+    font-size: 11px;
+}
+
+body
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+table td
+{
+    vertical-align: top;
+}
+
+#gridUpdates td
+{
+    border: 1px solid #DAE3F6;
+}
+
+#gridTariff td
+{
+    border: 1px solid #DAE3F6;
+}
+
+#DivUpdateProgress
+{
+    display:none;
+    position: absolute;
+    top: 39px;
+    left: 0;
+}
+
+#loading_notifier_box
+{
+    height: 71px;
+    margin: 1px 3px;
+    width: 167px;
+    color: #fff;
+    text-align: center;
+    line-height: 2em;
+    font-size: 12px;
+}
+
+#loading_notifier
+{
+    top: 200px;
+    left: 491px;
+    z-index: 10000;
+    background: url("../Images/popup.png") no-repeat scroll left top transparent;
+    color: #E5E5E5;
+    height: 77px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    visibility: visible;
+    width: 177px;
+}
+
+#processing_image
+{
+    width: 42px;
+    height: 42px;
+    z-index: 10000;
+    background: url("../Images/loader.gif");
+    left: 65px;
+    position: absolute;
+}
+
+#overlayDiv
+{
+    position: absolute;
+    width: 0;
+    width: 1149px;
+    height: 525px;
+    z-index: 10000;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+    padding: 0;
+    margin: 0;
+}
+
+.UpdateMalaysiaTD
+{
+    border-right:2px solid #999 !important;
+}
+.UpdateMalaysiaFooter
+{
+    border:2px solid #999;
+    font-size:15px;
+}

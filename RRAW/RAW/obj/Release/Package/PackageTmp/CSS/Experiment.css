@@ -1,0 +1,15 @@
+﻿.rounded-corners
+{
+    behavior: url(/css/border-radius.htc);
+}
+
+.button2 /*works with firefox only*/
+{
+    cursor: pointer;
+    padding: 4px 14px;
+    background: -moz-linear-gradient(center top , #F9F9F9, #E3E3E3) repeat scroll 0 0 transparent;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px 5px 5px 5px;
+    display: inline-block;
+    margin-right: 3px;
+}

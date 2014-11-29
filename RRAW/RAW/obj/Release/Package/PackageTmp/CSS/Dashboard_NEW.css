@@ -1,0 +1,103 @@
+﻿/* Main */
+.grid
+{
+    font-family:Verdana, Calibri, Trebuchet MS, Arial;
+    font-size:11px;
+}
+
+/* Header */
+.gridTitle {
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 4px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header {
+    border: 1px solid gray;
+    border-bottom-style: none;
+    color: #000;
+}
+
+.header th {
+    margin: 0;
+    padding: 4px;
+    border: 1px solid gray;
+}
+
+.header input[type='text'] {
+    width: 98%;
+}
+
+.header th {
+    padding-top: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: white;
+    background-color: #507CD1;
+    border-color: gray;
+    border-width: 1px;
+    border-style: Solid;
+    font-weight: bold;
+}
+
+
+/* Body */
+.body {
+    margin: 1px;
+    overflow-y:auto;
+    height:294px;
+}
+
+.body table {
+    border-collapse: collapse;
+}
+
+.body td {
+    margin: 0;
+    padding: 4px;
+    border: 1px solid gray;
+}
+
+
+/* Footer */
+.footer {
+    color: white;
+    background-color: #507CD1;
+    border: 1px solid gray;
+    font-weight: bold;
+    padding: 4px;
+    color: #fff;
+}
+
+.footerPageCounts {
+    float: left;
+}
+
+.footerExport {
+    text-align: right;
+}
+
+.footer a {
+    color: #fff;
+}
+
+
+/* Pager */
+.pager {
+    color: white;
+    background-color: #2461BF;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    font-size: Larger;
+    text-align: center;
+    padding: 4px;
+}
+
+.pager a {
+    color: #fff;
+}
